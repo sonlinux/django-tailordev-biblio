@@ -18,8 +18,9 @@ class AbstractHuman(models.Model):
     )
 
     # This is a django user
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL, blank=True, null=True, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+        blank=True, null=True,
+        on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -306,7 +307,7 @@ class Entry(models.Model):
         'Publisher',
         related_name='entries',
         null=True, blank=True,
-        on_delete=models.CASCADE    )
+        on_delete=models.CASCADE)
     address = models.CharField(
         _("Address"),
         max_length=250,
