@@ -18,7 +18,8 @@ class AbstractHuman(models.Model):
     )
 
     # This is a django user
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, blank=True, null=True, on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -189,7 +190,8 @@ class Entry(models.Model):
         related_name='entries',
         through='AuthorEntryRank'
     )
-    journal = models.ForeignKey('Journal', related_name='entries')
+    journal = models.ForeignKey(
+        'Journal', related_name='entries', on_delete=models.CASCADE)
     publication_date = models.DateField(_("Publication date"), null=True)
     is_partial_publication_date = models.BooleanField(
         _("Partial publication date?"),
@@ -303,8 +305,8 @@ class Entry(models.Model):
     publisher = models.ForeignKey(
         'Publisher',
         related_name='entries',
-        null=True, blank=True
-    )
+        null=True, blank=True,
+        on_delete=models.CASCADE    )
     address = models.CharField(
         _("Address"),
         max_length=250,
@@ -412,8 +414,8 @@ class Collection(models.Model):
 class AuthorEntryRank(models.Model):
     """Give the author rank for an entry author sequence"""
 
-    author = models.ForeignKey(Author)
-    entry = models.ForeignKey(Entry)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    entry = models.ForeignKey(Entry, on_delete=models.CASCADE)
     rank = models.IntegerField(
         _("Rank"),
         help_text=_("Author rank in entry authors sequence")
