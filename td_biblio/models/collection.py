@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+from django.db import models
+from django.utils.translation import ugettext_lazy as _
+
+
 class Collection(models.Model):
     """Define a collection of entries"""
 

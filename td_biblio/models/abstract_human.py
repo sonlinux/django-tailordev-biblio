@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+from django.db import models
+from django.conf import settings
+from django.contrib.auth import get_user_model
+from django.utils.translation import ugettext_lazy as _
+
+
 class AbstractHuman(models.Model):
     """Simple Abstract Human model
 

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.utils.translation import ugettext_lazy as _
 from td_biblio.models.abstract_entity import AbstractEntity
 
 

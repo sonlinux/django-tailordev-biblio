@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from django.db import models
+from django.utils.translation import ugettext_lazy as _
 from td_biblio.models.author import Author
 from td_biblio.models.entry import Entry
 
