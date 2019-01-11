@@ -4,13 +4,26 @@ python:
   - 3.4
   - 3.5
   - 3.6
+services:
+  - postgresql
+
 env:
-  - DJANGO_RELEASE='Django>=1.8,<1.9'
-  - DJANGO_RELEASE='Django>=1.9,<1.10'
-  - DJANGO_RELEASE='Django>=1.10,<1.11'
-  - DJANGO_RELEASE='Django>=1.11,<1.12'
-  - DJANGO_RELEASE='Django>=2.0,<2.1'
-  - DJANGO_RELEASE='Django>=2.1,<2.2'
+  global:
+    - ON_TRAVIS=true
+    - DATABASE_URL='postgres://postgres:@localhost:5432/test_db'
+    - SECRET_KEY='tT\xd7\xb06\xf7\x9b\xff\x0fZL\xca\xca\x11\xefM\xacr\xfb\xdf\xca\x9b'
+    - DJANGO_SETTINGS_MODULE=core.settings.test_travis
+    - RABBITMQ_HOST='rabbitmq'
+    - DJANGO_RELEASE='Django>=1.8,<1.9'
+    - DJANGO_RELEASE='Django>=1.9,<1.10'
+    - DJANGO_RELEASE='Django>=1.10,<1.11'
+    - DJANGO_RELEASE='Django>=1.11,<1.12'
+    - DJANGO_RELEASE='Django>=2.0,<2.1'
+    - DJANGO_RELEASE='Django>=2.1,<2.2'
+
+sudo: false
+dist: trusty
+
 matrix:
   exclude:
     ### These older Django version don't support Python 3.5+:
@@ -27,10 +40,32 @@ matrix:
     # Django 2.1+ dropped support for python 3.4
     - python: 3.4
       env: DJANGO_RELEASE='Django>=2.1,<2.2'
+
+addons:
+  postgresql: "9.3"
+  apt:
+    packages:
+    - postgresql-9.3-postgis-2.3
+
 install:
   - pip install "$DJANGO_RELEASE"
-  - pip install -r requirements/dev.txt
+  - pip install coveralls
+  - pip install -r REQUIREMENTS-dev.txt
+  - nodeenv -p --node=0.10.31
+  - npm -g install yuglify
+
+before_script:
+  - psql -c 'create database test_db;' -U postgres
+  - psql -c 'CREATE EXTENSION postgis;' -U postgres -d test_db
+
 script:
-  - flake8 td_biblio/
-  - PYTHONPATH=$(pwd) DATABASE_URL="sqlite:///:memory:" py.test
+  - flake8 --config .flake8 .
+  - python manage.py makemigrations
+  - python manage.py migrate
+  - python manage.py collectstatic --noinput --verbosity 0
+  - coverage run manage.py test
+  # - flake8 td_biblio/
+  # - PYTHONPATH=$(pwd) DATABASE_URL="sqlite:///:memory:" py.test
 after_success: coveralls
+
+

@@ -2,6 +2,29 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 
+with open("README.md") as f:
+    readme = f.read()
+
+
+def parse_requirements(requirements, ignore=("setuptools",)):
+    """Read dependencies from requirements file (with version numbers if any)
+
+    Note: this implementation does not support requirements files with extra
+    requirements
+    """
+    with open(requirements) as f:
+        packages = set()
+        for line in f:
+            line = line.strip()
+            if line.startswith(("#", "-r", "--")):
+                continue
+            if "#egg=" in line:
+                line = line.split("#egg=")[1]
+            pkg = line.strip()
+            if pkg not in ignore:
+                packages.add(pkg)
+        return list(packages)
+
 
 with open("README.md") as f:
     readme = f.read()
@@ -61,7 +84,9 @@ setup(
         "Development Status :: 5 - Production/Stable",
         "Operating System :: OS Independent",
     ],
-    install_requires=parse_requirements("requirements/base.txt"),
-    tests_require=parse_requirements("requirements/dev.txt"),
+    install_requires=parse_requirements(
+        "deployment/docker/REQUIREMENTS.txt"),
+    tests_require=parse_requirements( "deployment/docker/REQUIREMENTS.txt"),
     keywords="django biblio bibliography bibtex publication",
+    dependency_links=[]
 )

@@ -38,6 +38,7 @@ login: rosalind
 password: idiscovereddnastructurefirst
 ```
 
+The latest source code is available at https://github.com/TailorDev/django-tailordev-biblio
 ## Installation
 
 ### Install `td_biblio`
@@ -72,12 +73,72 @@ urlpatterns = [
 ]
 ```
 
+### Run with docker locally
+
+Quick Installation Guide
+------------------------
+Django TailorDev Biblio is a django app so it will help if you have
+some knowledge of running a django site.
+
+    git clone https://github.com/TailorDev/django-tailordev-biblio.git
+    
+    make build
+    
+    make permissions
+    
+    make web
+    
+    # Wait a few seconds for the DB to start before to do the next command
+    
+    make migrate
+    
+    make collectstatic
+    
+
+So as to create your admin account:
+```
+make superuser
+```
+
+
+Install as a Django Package
+---------------------------
+
+1. Add "td-biblio" to your INSTALLED_APPS setting like this:
+
+    INSTALLED_APPS = [
+        # other apps here
+        'td-biblio',
+    ]
+
+2. Include the td-biblio URLconf in your project urls.py like this:
+    ```perforce
+    # for django >= 2.0
+     path('bibliography/', include('fish.urls', namespace='td_biblio')),
+    ```
+    
+    ```perforce
+    # for django <= 2.0
+    url(r'^bibliography/', include('td_biblio.urls', namespace='td_biblio')),
+   ```
+   
+3. Run `python manage.py migrate` to create the bibliography models.
+
+
 And finally migrate your database from your project root path:
 
 ```bash
 $ python manage.py migrate td_biblio
 ```
 
+Or to migrate and collect static files with docker
+```bash
+$ make migrations && make collectstatic
+```
+
+_Nota bene:_ to use makefile you will need to have **make** installed on 
+your 
+computer
 ### Add a base template
 
 In order to use `td_biblio` templates, you will need to create a base template
@@ -124,11 +185,14 @@ dependencies in a virtual environment via:
 $ make bootstrap
 ```
 
-And then start the development server via:
+And then start the local development server via:
 
 ```bash
-$ make dev
+$ make devweb 
 ```
+Or to run in production mode via:
+
+$ make web
 
 ### Running the Tests
 
@@ -171,3 +235,12 @@ $ twine upload dist/*
 
 `django-tailordev-biblio` is released under the MIT License. See the bundled
 LICENSE file for details.
+
+Thank you
+_________
+
+Thank you to the individual contributors who have helped to build HealthyRivers:
+
+* Julien Maupetit (Lead developer)
+* Alison Mukoma: mukomalison@gmail.com :nerd_face:
+
