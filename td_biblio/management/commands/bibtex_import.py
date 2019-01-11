@@ -14,7 +14,8 @@ class Command(BaseCommand):
         return logger
 
     def add_arguments(self, parser):
-        parser.add_argument("bibtex", help="The path to the BibTeX file to import")
+        parser.add_argument("bibtex", help="The path to the BibTeX file to "
+                                           "import")
 
     def handle(self, *args, **options):
         logger = self._get_logger()

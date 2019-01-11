@@ -1,0 +1,1885 @@
+[33mcommit e9cf493d9f2f3ff8333b3d5e294104ab86a8a90b[m[33m ([m[1;36mHEAD -> [m[1;32mdockerise_me[m[33m)[m
+Author: Alison Mukoma <mukomalison@gmail.com>
+Date:   Sat Jan 12 00:33:19 2019 +0200
+
+    Add docker configs into own dir
+
+[33mcommit 6af5950739f5b661459a3863fa0d574f48222112[m[33m ([m[1;33mtag: 2.0.0[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Nov 13 22:24:49 2018 +0100
+
+    Bump release to 2.0.0
+
+[33mcommit 6b4741a057ae8cc4e682713d8a86eb54b37d80ed[m
+Author: Anas <AnasGhrab@users.noreply.github.com>
+Date:   Fri Aug 31 15:07:51 2018 +0100
+
+    Make journal's name optionnal
+    
+    Books, etc. are not related to Journal.
+
+[33mcommit 608b0bd85c55bf241cec5aea7311fff6e77628f7[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Nov 13 21:05:35 2018 +0100
+
+    Update compatibility matrix
+    
+    * Remove Django 1.8
+    * Add Django 2.0
+    * Add Django 2.1
+    
+    It should also work with Python 3.7 but it's not yet available on
+    Travis.CI.
+
+[33mcommit b2ead96617f77c1643f1774eac6be62462607563[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Nov 13 20:37:26 2018 +0100
+
+    Ignore VSCode settings
+
+[33mcommit 1077bfd6cec982f0035a83ab068e2343b036a002[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Nov 13 20:36:45 2018 +0100
+
+    Fix flake8 linting errors
+
+[33mcommit cc5a7cc196f0c0b100a2865ee4d649ad644ef5dd[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Nov 12 23:58:27 2018 +0100
+
+    Increase flake8 max line length
+    
+    To fit with Black formatter max line length, increase flake8 option to 89.
+
+[33mcommit 9ef5255f272da14f07eea62ae472fe0ab90f808d[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Nov 12 23:48:55 2018 +0100
+
+    Fix test_load_records_from_an_existing_doi date
+
+[33mcommit 56a0a6a0c006b72d61563398d9aed7331fc369f7[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Nov 12 23:43:36 2018 +0100
+
+    Upgrade pytest to 3.6+
+
+[33mcommit df4f5b709552ea1ab86cfb443e9301c49be245d8[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Nov 12 23:22:40 2018 +0100
+
+    Fix Django > 2.0 compatibility
+
+[33mcommit 7870b3b5a088293906d50320cbb8e3763d939485[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Nov 12 23:07:42 2018 +0100
+
+    Format code with black
+
+[33mcommit 06f0f865d2ec2cc21b74653fded1cab8d5f95720[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Sun Dec 3 18:55:37 2017 +0100
+
+    Fix pep8
+
+[33mcommit b509867fdf4755dd552792cf490aaa82595e066c[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Sun Dec 3 18:12:56 2017 +0100
+
+    Make lazy choices for AuthorDuplicatesForm
+
+[33mcommit 45337a04857d36bb114e190e14e4931b0c0677d1[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Sun Dec 3 18:00:25 2017 +0100
+
+    Fix setup.py install requires type
+
+[33mcommit 87ab40aedace54fbe7abcf0ce65b94dd51033c2b[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Sun Dec 3 17:00:08 2017 +0100
+
+    Add author alias support in entry list view
+
+[33mcommit dfc43263afbd970863d8783f5eaeabb13f1426c3[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Sun Dec 3 16:26:07 2017 +0100
+
+    Fix entry list filtering
+
+[33mcommit 726ead82179575dbce81bd27de9f099b32d16052[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Sat Dec 2 16:10:50 2017 +0100
+
+    Add support for custom paginate by
+
+[33mcommit 04d04290ed646e5a885996f7d1d877aca7a99042[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Sat Dec 2 15:36:11 2017 +0100
+
+    Redirect to the same page
+
+[33mcommit d1740325409232ab97aaa02387ab3298d9193999[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Sat Dec 2 15:20:58 2017 +0100
+
+    Add FindDuplicatedAuthorsView admin view
+
+[33mcommit dde3dde1d9b90480e0ee2d915e5a6770055fc5d3[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Dec 1 18:59:50 2017 +0100
+
+    Add human model alias field (fk to self)
+
+[33mcommit eb4f54937444a44fc3c6d310f2469afbf5989bfc[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Dec 1 18:59:32 2017 +0100
+
+    Add management command shortcut
+
+[33mcommit 98f3620237d5f0f1e95f80fcadd558ca36fddcf5[m[33m ([m[1;33mtag: 1.2.0[m[33m)[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Dec 1 14:06:46 2017 +0100
+
+    Bump release to 1.2.0
+
+[33mcommit a445f65e2376ba9f5256c2462369e0b69e52bef9[m
+Merge: c7c4c01 7c267b6
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Fri Dec 1 13:58:51 2017 +0100
+
+    Merge pull request #27 from TailorDev/fix-heroku-deploy
+    
+    Use heroku latest python 3.6 release
+
+[33mcommit 7c267b6bf7ada0092ff9d0e4ccc75ea6400c21a2[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Dec 1 13:58:04 2017 +0100
+
+    Use heroku latest python 3.6 release
+
+[33mcommit c7c4c0146e7972d2a2ff8aecd040271caeece6f5[m
+Merge: f7898eb baffce9
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Fri Dec 1 11:40:28 2017 +0100
+
+    Merge pull request #25 from TailorDev/add-doi-tests
+    
+    Make batch importation more robust
+
+[33mcommit baffce961a1ec4a122286f9a2e43ecd60173fa99[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Dec 1 11:22:00 2017 +0100
+
+    Fix flake8 E722 rule
+
+[33mcommit 54903899e5e389dd1cf19aafda16c0399d86a7ce[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Dec 1 10:47:22 2017 +0100
+
+    Add term-missing in coverage report
+
+[33mcommit c8901e95e0527cde9cae5618fe783d205d100b91[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Dec 1 10:46:51 2017 +0100
+
+    Add tests for loaders to_record exceptions
+
+[33mcommit 03354b8152cbc664723cb8d562045ce41db00cf7[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Dec 1 10:42:21 2017 +0100
+
+    Add pytest-mock dependency
+
+[33mcommit f3cf7165d61b9ca878e87ab5605b3a1e6aa2f70f[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Dec 1 10:04:53 2017 +0100
+
+    Better catch to_record exceptions
+
+[33mcommit fceccb30659e46ed46933bda58611e72950b8095[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Sep 26 11:06:53 2017 +0200
+
+    Fix pep8
+
+[33mcommit 3a0cee954538357fd946b15916a729bfbd564f97[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Sep 26 10:19:30 2017 +0200
+
+    Fix test (journal full name)
+
+[33mcommit b4456418a2030823ed640b84a9e958c7f5f83ce4[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Sep 26 10:14:06 2017 +0200
+
+    Catch PMIDLoader errors during batch importation
+
+[33mcommit eab4f6762dd285af0ad1ac213a214507337a2b51[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 23 23:06:07 2017 +0200
+
+    Fix issue related to empty authors names
+
+[33mcommit a0f1b25d1f0a28572c4ff1e9fa89b7233d3f8724[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 23 22:58:16 2017 +0200
+
+    Catch DOILoader errors during batch importation
+
+[33mcommit 454f2d8626f66270b6eaff34f1c4cc3b78c25fb9[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 23 22:57:29 2017 +0200
+
+    Add error message style
+
+[33mcommit 5322c464126f33afa65e42d956f0db213f5c93a3[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 23 16:45:46 2017 +0200
+
+    Add new fixtures
+
+[33mcommit f7898eb35f5bb53eb007db11ca60fa257f34e380[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Jun 14 11:10:51 2017 +0200
+
+    Add PyPI publication docs/requirements
+
+[33mcommit a0c823aa7ab87c2a21514d06a57724261ba600c1[m[33m ([m[1;33mtag: 1.1.0[m[33m)[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Jun 14 11:01:31 2017 +0200
+
+    Bump release to 1.1.0
+
+[33mcommit 691c1cfb00a9b16b4bfbbf2e7b933032a6e5930e[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Jun 14 11:01:13 2017 +0200
+
+    Add missing files to dist
+
+[33mcommit 6e79436cf72e5136f2a6b12248969b74ab89fd28[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Jun 14 11:00:52 2017 +0200
+
+    Add Django 1.11 compat to setup file
+
+[33mcommit 6fc2e75958d4cff9a09a056df503078ef93bbe5f[m
+Merge: 1ab1ec6 287b7a2
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Mon Jun 12 22:16:00 2017 +0200
+
+    Merge pull request #20 from TailorDev/prettier-sandbox
+    
+    Prettier sandbox
+
+[33mcommit 287b7a259667fe0e9f475ef7dce7df3325a93b07[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 21:47:49 2017 +0200
+
+    Force input PMIDs / DOIs sorting
+
+[33mcommit 688f64303da1d19d41e7b7b65be6e6c18f4a2e40[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 21:42:24 2017 +0200
+
+    Fix Django<1.8 compat
+
+[33mcommit d331ae9cdbba0a24df2d6360d84599768df898fc[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 21:42:09 2017 +0200
+
+    Fix py2 unicode compat
+
+[33mcommit 74c543d05e93eb66087cca19295991072d8255dd[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 21:20:44 2017 +0200
+
+    Handle empty form submission
+
+[33mcommit 0496e3784d8aab3979ac0c44887fd0536eb0b7ea[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 20:50:41 2017 +0200
+
+    Add login page
+
+[33mcommit d1a4677cec682f46e278a5a243dfe4be8c9c4ef5[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 17:50:12 2017 +0200
+
+    Improve docs
+
+[33mcommit ff467ca20f1644edfce8032bcd66ca89232ebf46[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 17:40:29 2017 +0200
+
+    Add sandbox section to the docs
+
+[33mcommit 9a90032f0d3e85ff6bac3679799d384b7721c2fa[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 17:15:58 2017 +0200
+
+    Make the sandbox responsive
+
+[33mcommit 9f2917a173e2943f762166a5dd97d07cd8b0570d[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 16:23:43 2017 +0200
+
+    Improve messages style
+
+[33mcommit 5834a3690d0b7173b58e7625f7ab25dbe8fa5a2d[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 16:14:32 2017 +0200
+
+    Improve import form styles
+
+[33mcommit 08cb257b21bdefb302ac5cf358cf6fffec1e038f[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 16:02:24 2017 +0200
+
+    Fix left sidebar width
+
+[33mcommit c38f308b03869606b36e704128e7553a12790bde[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon Jun 12 16:00:37 2017 +0200
+
+    Fix admin import message position
+
+[33mcommit 1ab1ec6404a9767d1755e8e2fed7437e2920f655[m
+Merge: 9032cb0 069c4ee
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Sat Jun 10 00:32:51 2017 +0200
+
+    Merge pull request #19 from TailorDev/deploy-heroku
+    
+    Don't prefix td_biblio urls in the sandbox
+
+[33mcommit 9032cb0bd73750f9410fac232136c6151404a919[m
+Merge: 283cfb0 645a840
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Sat Jun 10 00:30:13 2017 +0200
+
+    Merge pull request #18 from TailorDev/deploy-heroku
+    
+    Add sandbox automated deployment to heroku
+
+[33mcommit f84a85f0d917005e84b7ddc8f395e639e55185c9[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Sat Jun 10 00:26:45 2017 +0200
+
+    Add basic entry list integration
+
+[33mcommit 7c62ed9bc21f4f787a453c7f31090e04e9b3f2b1[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 23:34:05 2017 +0200
+
+    Add milligram & basic styles
+
+[33mcommit 93b3de647af4944cd8d109f587342cf90a62b8d4[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 23:05:48 2017 +0200
+
+    Fix indentation
+
+[33mcommit 1c2e686f9b54f478a1a03574598461e4e722eee4[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 23:04:27 2017 +0200
+
+    Move base styles to a CSS file
+
+[33mcommit 069c4ee8d003a180ab28bbdb319390d0d7609573[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 22:56:16 2017 +0200
+
+    Don't prefix td_biblio urls in the sandbox
+
+[33mcommit 645a8406e4955c239b8642f7fbb33403e415cec4[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 22:50:51 2017 +0200
+
+    Inactivate the whitenoise STATICFILES_STORAGE
+    
+    As stated in the documentation, this storage may lead to failures for CSS files
+    mentionning extra files.
+    http://whitenoise.evans.io/en/stable/django.html#troubleshooting-the-whitenoise-storage-backend
+
+[33mcommit cbea93ad1ccb7e85e835009e26c5835b8a0fc67d[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 22:36:21 2017 +0200
+
+    Add static directory (required for collectstatic)
+
+[33mcommit 668ce7560939c7e15f8359c21d48272055060902[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 22:34:06 2017 +0200
+
+    Add docs for heroku deployment
+
+[33mcommit 4523069780b3f8ccfb2f518f54cc84b8c20ad2df[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 22:33:39 2017 +0200
+
+    Add & configure whitenoise to serve static files
+
+[33mcommit c6f17783a2d2b32e5d5aeea037011cc9a618e13d[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 18:55:20 2017 +0200
+
+    Fix CI script
+
+[33mcommit 81663cb20c41c4079806aa444edd6c0ca437b4ac[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 18:31:27 2017 +0200
+
+    Add Makefile to ease common tasks
+
+[33mcommit 94c0a470f26030980aee3405c78646122196c191[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 17:41:00 2017 +0200
+
+    Update sandbox configuration for Heroku
+
+[33mcommit 9c53d68160e4d35d83931bf63a9057d586aad5aa[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 17:40:18 2017 +0200
+
+    Add heroku web description
+
+[33mcommit 0fe064e5c256b8e1bbe3fff72060fd01cb46a175[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 17:31:04 2017 +0200
+
+    Refactor requirements
+
+[33mcommit 283cfb0b92c168e03f12137f1c9ea36ade2daab6[m
+Merge: 2a22546 dc34479
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Fri Jun 9 11:07:22 2017 +0200
+
+    Merge pull request #17 from TailorDev/fix-map
+    
+    Fix Abstract Human map method
+
+[33mcommit dc3447976edf95bf74081648584860329549b742[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 00:09:26 2017 +0200
+
+    Fix quotes
+
+[33mcommit e70a67e3be8e0aa54f368466d7e831ba8d565d42[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Jun 9 00:05:40 2017 +0200
+
+    Fix map method naming -> _set_user
+
+[33mcommit 2a22546da5dfbc1a82cdd4181c9a76d43bc9d945[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 23:56:17 2017 +0200
+
+    Clean legacy code
+
+[33mcommit d0e0db0dd50cc372090a0b773d465d9de5ad250f[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 23:47:11 2017 +0200
+
+    Fix docs
+
+[33mcommit 31105dc1af3ee4fbe9c8a90323e0255557d688d9[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 23:33:50 2017 +0200
+
+    Fix coveralls default branch
+
+[33mcommit bd089781897fdb564054beb9c270670d6e3dfb1d[m
+Merge: bee529e 6c316ff
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Thu Jun 8 23:31:59 2017 +0200
+
+    Merge pull request #16 from TailorDev/coveralls
+    
+    WIP: Integrate coveralls
+
+[33mcommit 6c316ffa38fc0f0675473ba211b90e72723938bb[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 23:31:02 2017 +0200
+
+    Add coveralls badge to the project
+
+[33mcommit f1552dd3c2c9a9ac84ba2be3f6df54bded527393[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 19:25:39 2017 +0200
+
+    Integrate coveralls
+    
+    Fix #11
+
+[33mcommit bee529e80d69e89f2cb1771879fe9a973c92bb96[m
+Merge: 3d6d621 1e8f4fc
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Thu Jun 8 23:14:16 2017 +0200
+
+    Merge pull request #15 from TailorDev/django-1.11
+    
+    Add Django 1.11 compatibility
+
+[33mcommit 1e8f4fc91b06d0851b33c84fea50758be14a7ac1[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 19:07:54 2017 +0200
+
+    Update compatibility matrix in the docs
+    
+    Fix #12
+
+[33mcommit c863c9803ff608867db040692cd3c7590dfcc10d[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 18:57:51 2017 +0200
+
+    Check Django 1.11 compatibility
+
+[33mcommit 3d6d6211ba90cec8376672cbdaeaa90c953545ea[m
+Merge: 6f27c41 1f32f02
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Thu Jun 8 19:00:20 2017 +0200
+
+    Merge pull request #14 from TailorDev/fix-batch-import-perm
+    
+    Improve batch import view
+
+[33mcommit 1f32f021082cd8c91306e3f43f87687333fb3234[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 18:11:41 2017 +0200
+
+    Restore compatibility with Django<1.10 releases
+
+[33mcommit be8b9720b105e491584bf7450b61b336b468b318[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 17:26:37 2017 +0200
+
+    Remove the import success view in favor of a msg
+
+[33mcommit a584023a1f7a408f2e8fcdf0cb3d8d1157db8952[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 17:05:39 2017 +0200
+
+    Restrict import view to super users
+
+[33mcommit 6f27c418f3b1ee77b2da203c1b01bd37693a64d9[m
+Merge: 05828b2 dc91d3a
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Thu Jun 8 16:19:56 2017 +0200
+
+    Merge pull request #13 from TailorDev/batch-import-view
+    
+    Add batch importation from PMIDs or DOIs
+
+[33mcommit dc91d3a079a4dbee7ee2b567c56a8395e3942dd9[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 15:52:52 2017 +0200
+
+    Fix DOILoader docstrings
+
+[33mcommit 8b0a011a7f41c1d2f3448c9ae6315466d8159a6c[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Jun 8 14:20:46 2017 +0200
+
+    Submit a list to CN and expect unicode response
+    
+    This fixes python 2 compat
+
+[33mcommit 69f45f0f490d854335eed03198754fbb65fc9110[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed May 24 16:14:53 2017 +0200
+
+    Improve importation form wording
+
+[33mcommit d395f39200fe3b77d413e8746fad4f8f832b943c[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed May 24 15:50:31 2017 +0200
+
+    Fix inmportation form placeholders
+    
+    Carriage returns are not rendered in firefox
+
+[33mcommit e664c5ec6bb90f65ab159fdf332c06d4bd0f42e2[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed May 24 15:31:12 2017 +0200
+
+    Add app_name url to td_biblio
+
+[33mcommit f33c302b93ea7673f248a0ee219145661fea6634[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed May 24 11:44:00 2017 +0200
+
+    Fix python 2/3 compatibility
+
+[33mcommit b46d65d18a520b4bc4afcb65d182e643a7bccce6[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue May 23 17:03:54 2017 +0200
+
+    Bump habanero release to 0.3.0
+
+[33mcommit 0235cc8738326589ba370e1f00b9a94fc0b9c883[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue May 23 17:02:27 2017 +0200
+
+    Fix pep8
+
+[33mcommit 9d8ed89b9426180c887662f89a82e1e11b6ba576[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue May 23 16:55:17 2017 +0200
+
+    Add missing test for the Entry model
+
+[33mcommit 144eac89eb409f1d0306726f8c7a8e8c15b807de[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue May 23 16:55:00 2017 +0200
+
+    Add tests for importation views
+
+[33mcommit 24bb92edc18ea65166873fa41cd8db3ed6d62b5d[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue May 23 16:29:19 2017 +0200
+
+    Add tests for forms
+
+[33mcommit cbffdeaf350e0c936f0fadbfeb4a432bdb8ef616[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue May 23 16:27:53 2017 +0200
+
+    Fix typo
+
+[33mcommit ea09b341b7dba1ca1a7c9788d260b43b8d2cf6a0[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue May 23 12:53:41 2017 +0200
+
+    Improve DOILoader robustness
+
+[33mcommit 6fcb6e8f6b37e2bf42cb838ff46510f14d2c4dad[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue May 23 12:02:13 2017 +0200
+
+    Fix namespaced url
+
+[33mcommit 5771b577b9c3db9f36679fdd181db690b10329a9[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue May 23 11:59:08 2017 +0200
+
+    Add tests for the BibTexLoader
+
+[33mcommit 4ec03ba6e5fd359110f45585e96d2b117d776953[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue May 23 11:19:47 2017 +0200
+
+    Add tests for batch PMID/DOI loading
+
+[33mcommit b57e2f5800a325bede243572aa619e590a7604c3[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon May 15 23:18:26 2017 +0200
+
+    Add draft implementation of the importation view
+
+[33mcommit 8c34d9281d0e0ecdacf39a9d6cc9f0e594c296c7[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Mon May 15 22:59:50 2017 +0200
+
+    Fix empty number requests
+
+[33mcommit a35e341d7c13940809992794f84ae88d40a3c068[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri May 12 16:39:07 2017 +0200
+
+    Add DOILoader
+
+[33mcommit a01d6a349ea62a9693db463f95d1f798ebf430d7[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Apr 12 08:15:35 2017 +0200
+
+    Fix python 2/3 compatibility
+
+[33mcommit 99eef0a4a1e3544b27562ffd93bb4c0f345e8cb8[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Apr 11 23:10:50 2017 +0200
+
+    Fix py27 unicode support
+
+[33mcommit 6ebd9ae02026d867ef0f9b3eda85f4b7cedabef1[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Apr 11 22:50:57 2017 +0200
+
+    Fix pep8
+
+[33mcommit 971423519934c9776ee15647856cd1022a86edaa[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Apr 11 18:59:37 2017 +0200
+
+    Add PubmedLoader
+
+[33mcommit 11c17e71a7a0cee89a7b517b9536c16a51da25e2[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Apr 11 18:09:59 2017 +0200
+
+    Move utils.managers -> utils.loaders
+
+[33mcommit 9fdefeaa1a9c24fb4c1144afa90c5c5d63fb3ce5[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Apr 11 18:05:38 2017 +0200
+
+    Refactor the bibtex loader
+    
+    * Add a BaseLoader to ease new loader implementation
+    * Add a BibTexLoader
+
+[33mcommit 05828b21d0b5f4be7c1ce139cef81ecd2e5192df[m[33m ([m[1;33mtag: 1.0.1[m[33m)[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 19:26:52 2017 +0100
+
+    Bump release to 1.0.1
+
+[33mcommit c1fa30f8c89370b44c4fb31f755779afab710657[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 19:23:32 2017 +0100
+
+    Fix missing dev requirements
+
+[33mcommit 5c06dd7df62af1c6a1cdc18621f1a4fdb96ab76b[m[33m ([m[1;33mtag: 1.0.0[m[33m)[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 18:56:53 2017 +0100
+
+    Bump release to 1.0.0
+
+[33mcommit b6ea911fa5fc8b02a8a4bcc28e8a723465d7f221[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 18:50:25 2017 +0100
+
+    Add badges to the README
+
+[33mcommit 5b1fd36eeba60f4ed109818651d44f5625522d89[m
+Merge: c087586 a3bcae0
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Thu Mar 23 18:41:45 2017 +0100
+
+    Merge pull request #8 from TailorDev/fix-js-deps
+    
+    Remove jQuery implicit dependency
+
+[33mcommit a3bcae07cad926cde23132cc054b30c63d4d5d36[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 17:46:28 2017 +0100
+
+    Remove jQuery implicit dependency
+    
+    Fix #2
+    These changes implement the form submission on filter change in pure JavaScript.
+
+[33mcommit c087586f69da97bc4af552016ee5e0ad6850646b[m
+Merge: 2003f28 8bb6e9f
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Thu Mar 23 18:19:39 2017 +0100
+
+    Merge pull request #7 from TailorDev/fix-bibtex-import
+    
+    Fix bibtex import
+
+[33mcommit 8bb6e9fec4ff942951e319f7abdca21c874773c7[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 18:11:32 2017 +0100
+
+    Use a logger to maintain Django>=1.7,<1.9 compat.
+
+[33mcommit 2c8e212eafe0a45bfa232354fe2bea3e25d91166[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 18:02:02 2017 +0100
+
+    Fix handle usage with the new arg parser
+
+[33mcommit a4a3cb43d7e79d5800b0782fb96cf77f55213998[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 17:11:07 2017 +0100
+
+    Improve base template and document it
+
+[33mcommit a6501c9da1e444647539b1fb80f2714101e8e4c4[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 17:06:48 2017 +0100
+
+    Add log message when importation is done
+
+[33mcommit f57e3fbdc47ee11a572cd80fc521bd7337f9aa23[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 17:05:39 2017 +0100
+
+    Switch bibtex_import command to argparse
+    
+    Fix #4
+
+[33mcommit 2003f28410b741c3da69127230d548bc0a94b25a[m
+Merge: 3ae4479 f2d1eba
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Thu Mar 23 17:46:14 2017 +0100
+
+    Merge pull request #6 from TailorDev/fix-static-urls
+    
+    Fix static urls in templates
+
+[33mcommit f2d1eba7d04d62d8cdf75db3db61283d711c0988[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 16:13:03 2017 +0100
+
+    Fix static urls in templates
+    
+    Fix #5
+
+[33mcommit 3ae44790549d575c93729f42dd51da5d22291820[m
+Merge: aaa50c8 4afd76e
+Author: Julien Maupetit <jmaupetit@users.noreply.github.com>
+Date:   Thu Mar 23 17:11:56 2017 +0100
+
+    Merge pull request #1 from TailorDev/py3-dj110
+    
+    Add python 3 and django >= 1.7 compatibility
+
+[33mcommit 4afd76e7e155ada68eb9c0a96a6b451cf59687df[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 15:44:52 2017 +0100
+
+    Fix classifiers and other meta
+
+[33mcommit d3fcc401ccd93c7cd69f97e6822cfe656a304ba2[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 15:32:53 2017 +0100
+
+    Update docs
+
+[33mcommit 8cb4655139d51ce4fdebc2aad1a57f450bc01b82[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 23 15:31:46 2017 +0100
+
+    Fix LICENSE formatting & copyright holder
+
+[33mcommit 58c932811b90581eb68e14f07be72017714e0cc2[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Mar 17 09:32:33 2017 +0100
+
+    Fix author repr for py2/3 compat
+
+[33mcommit 8d4cb1f2af5e79a418cf392d03ee25981e160c18[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Mar 17 01:24:43 2017 +0100
+
+    Ignore django 1.7 with python 3.5+
+    
+    It raises the following error:
+    AttributeError: module 'html.parser' has no attribute 'HTMLParseError'
+
+[33mcommit 5ec27c5c1da7b3550a0a10b2831b6a3e510851fa[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Fri Mar 17 00:35:05 2017 +0100
+
+    Restore non lazy url reverse
+    
+    This must fix compatibility with older django releases (<1.9)
+
+[33mcommit b8f271cb15b2c49140ba1077783a3366d9a8b37c[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 22:17:55 2017 +0100
+
+    Add travis configuration
+    
+    Run tests with python2.7 or python3.4 combined with django 1.7 to 1.10
+
+[33mcommit 9d10aa4810840fccb2fba8cd41dac3a61135b66a[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 17:12:49 2017 +0100
+
+    Configure flake8 & fix pep8
+
+[33mcommit 138d88d5ee854f70696fe71c25a82ff9811a4014[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 16:58:57 2017 +0100
+
+    Add py.test coverage
+
+[33mcommit df18ebbf690d3ef9e05fe9c84980d4c3f692936f[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 16:58:26 2017 +0100
+
+    Run the sandbox server from the project root
+
+[33mcommit 4e209211145eaade105b95f2828706bb23bacbb4[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 16:58:13 2017 +0100
+
+    Fix missing wsgi file
+
+[33mcommit 624636310cb13035d99852e89a42c8f13ad6b531[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 16:47:48 2017 +0100
+
+    Fix map usage
+
+[33mcommit 9b8f3c2054f524a34f58fe15a275c7a716978b55[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 16:47:21 2017 +0100
+
+    Simplify the sandbox tree
+
+[33mcommit 97f7252d89a74a6ba301b3389968c6e73ec93246[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 16:34:46 2017 +0100
+
+    Fix unicode -> str
+
+[33mcommit 3c80a83c77ede2c9159f12c3531c6a96063b9472[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 16:29:39 2017 +0100
+
+    Remove unused py2/3 compatibility layer
+
+[33mcommit 437f2565d125865fe076a3f3850fc19178b4006e[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 16:28:23 2017 +0100
+
+    Use new bibtexparser method to import bibtex files
+
+[33mcommit 0496bd5d38a933e76579e56489004428429d7a17[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 16:27:33 2017 +0100
+
+    Switch to py.test
+    
+    Fix #3
+
+[33mcommit 1df1f58710b390b330c08c86d689c7eb7081550c[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 15:56:04 2017 +0100
+
+    Fix unicode strings
+
+[33mcommit 06bbf48d340b376a88cda1e4cc79665d940df7ef[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 15:16:36 2017 +0100
+
+    Lazy reverse urls in tests
+
+[33mcommit 4ed5716f7844f7168a6fe5b142d7bd73486b87e4[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Thu Mar 16 15:16:08 2017 +0100
+
+    Make td_biblio a configurable app
+
+[33mcommit 14c393bd003cb569f8f4ba76bebdaaca67fbc24a[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 11:48:19 2017 +0100
+
+    Switch to factory boy >= 2.6
+    
+    * names is no longer required as Faker is now bundled with factory boy
+    * Use new factory boy schema with faker
+
+[33mcommit 5cc0df9f3371a3d11db358b89f198a632e64c530[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 11:31:42 2017 +0100
+
+    Fix pep8
+
+[33mcommit 86a1cdd964564ffbdbf91e6fc31d696edffb62e3[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 11:18:10 2017 +0100
+
+    Fix xrange -> range
+
+[33mcommit 33a844b89d62ad4649ab484fd349e6f8aeb34ae3[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 11:17:36 2017 +0100
+
+    Fix lambda syntax
+
+[33mcommit 8d613072e3f73c0ebea093140a975fd72249e6ae[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 11:16:15 2017 +0100
+
+    Lazy load gettext
+
+[33mcommit 6aa23223792164193615171d7e43cad8d779bc81[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 11:06:26 2017 +0100
+
+    Remove silly headers
+
+[33mcommit 9dd63cb5dd0a366d14980de2b149b6327216afda[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 11:06:10 2017 +0100
+
+    Improve audience
+
+[33mcommit f204fa0c61b45ec7752ce6953869c7f9c936aeb3[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 10:14:04 2017 +0100
+
+    Fix required base dependencies file name
+
+[33mcommit 50a6549254ffa67fe199fc7d130554a08c3f4ec6[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 10:12:35 2017 +0100
+
+    Add setup config
+
+[33mcommit b5f8bb6d58ba2c7ab99da0c3d56f34e6065402d7[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 10:11:40 2017 +0100
+
+    Move requirements to project root
+
+[33mcommit 3c3e1f7b3e7792f5f568a62f89394231edd01c61[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 10:07:47 2017 +0100
+
+    Make setup.py executable and fix meta
+
+[33mcommit a82cd0bdf4bb28d0fa554819888e024bed4b4117[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 10:01:34 2017 +0100
+
+    Fix package meta
+
+[33mcommit d423668902a87c17e73f3521e58571709c9b9283[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 09:59:36 2017 +0100
+
+    Switch to django new url schema
+
+[33mcommit 0a8c4578c8be2aa5b1f51ae2d66fcb28e214f83b[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 09:57:43 2017 +0100
+
+    Remove unused Sphinx dependency
+
+[33mcommit 36767e873f8b23bbb1d5396df0b787170bea6e8f[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 09:57:28 2017 +0100
+
+    Ignore py3 cache
+
+[33mcommit d1f5584c84eb20b735c178f1673c644aab0c80a6[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 09:54:20 2017 +0100
+
+    Add django initial migration
+
+[33mcommit 5ab6363dc6519cf7239d7c377afd64c5b8da9585[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Wed Mar 15 09:53:50 2017 +0100
+
+    Remove South legacy migrations
+
+[33mcommit 96a2309bbf8313c76e0c9e77f90a5af19b465b19[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Mar 14 16:41:43 2017 +0100
+
+    Upgrade Django minimal release compatibility
+
+[33mcommit 90c9606145e15194ee4cd61bd189ad09ca075320[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Mar 14 16:37:00 2017 +0100
+
+    Ignore virtualenv
+
+[33mcommit 02ba42b0ac6ae08016a1da1c530379f400fb375d[m
+Author: Julien Maupetit <julien@tailordev.fr>
+Date:   Tue Mar 14 16:36:19 2017 +0100
+
+    Fix pip requirements parsing
+
+[33mcommit aaa50c8537d6ba65410a0b9abfda4475fab5f38c[m[33m ([m[1;33mtag: 0.3[m[33m)[m
+Merge: b9dc77e 7d7d9a8
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Tue Feb 3 11:52:47 2015 +0100
+
+    Merge branch 'release/0.3'
+
+[33mcommit 7d7d9a8aae81cc93753cd7b5ee85ebb871af8a08[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Tue Feb 3 11:52:36 2015 +0100
+
+    Bump release to 0.3
+
+[33mcommit 2794db8727bb14fff457bb11a521d750edf70ee2[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Tue Feb 3 11:49:34 2015 +0100
+
+    Use partial template for publication list
+
+[33mcommit 0a2df2a6ba1fcf46c4f0199f71ccb465ce551eb8[m
+Merge: 19eea04 f0db670
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Tue Feb 3 11:28:57 2015 +0100
+
+    Merge branch 'release/0.2.1' into develop
+
+[33mcommit b9dc77e2c3e180c9339c7e421235153ed6d4a231[m[33m ([m[1;33mtag: 0.2.1[m[33m)[m
+Merge: 054161c f0db670
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Tue Feb 3 11:28:44 2015 +0100
+
+    Merge branch 'release/0.2.1'
+
+[33mcommit f0db6703149f6ee5e1619eec67808bda6569f7fa[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Tue Feb 3 11:28:24 2015 +0100
+
+    Bump release to 0.2.1
+
+[33mcommit 19eea04053be505710a9537cfeb6afdcb0b2511f[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Tue Feb 3 11:26:34 2015 +0100
+
+    Entry last/first authors should be properties
+    
+    * Fix tests
+
+[33mcommit 8e7977f77273d69d6dda5617cd921151269a6cdc[m
+Merge: e414475 227a4ce
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Mon Jun 2 20:38:59 2014 +0200
+
+    Merge branch 'release/0.2' into develop
+
+[33mcommit 054161c18ca39369ac425f1dea9e6dd59e52116d[m[33m ([m[1;33mtag: 0.2[m[33m)[m
+Merge: 59bf6a2 227a4ce
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Mon Jun 2 20:38:53 2014 +0200
+
+    Merge branch 'release/0.2'
+
+[33mcommit 227a4cec0490de613f50efa90eec02b8ab7a2892[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Mon Jun 2 20:38:40 2014 +0200
+
+    Update changelog
+
+[33mcommit 00d013402a2210a9da12c05eec9286c3f97e4b1a[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Mon Jun 2 20:37:13 2014 +0200
+
+    Bump release to 0.2
+
+[33mcommit e41447524417d81e0b939718a7d670aeff2e7b02[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Mon Jun 2 17:36:19 2014 +0200
+
+    Add mapped user to Author admin list
+
+[33mcommit e43414dd845013aecec36254a97eed4d424156f7[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Mon Jun 2 17:28:28 2014 +0200
+
+    Add ordering meta for Author and Editor objects
+    
+    * by default authors and editors are ordered by their last names, first names
+
+[33mcommit ce4c799c3d35453685d1c36ef8ff60f326f613b6[m
+Merge: c5ac89f 5dc80ce
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Mon Jun 2 15:17:43 2014 +0200
+
+    Merge branch 'feature/incomplete-date' into develop
+    
+    Fix issue #11
+
+[33mcommit 5dc80cede3fbc94cb64da75302a4ef53086acb63[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Mon Jun 2 15:17:09 2014 +0200
+
+    Add tests for the templatetag library
+
+[33mcommit f80ada52a1f5d518251bf33b8daf5025494d5e5b[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Mon Jun 2 15:16:53 2014 +0200
+
+    Ignore migrations for coverage
+
+[33mcommit f33256a5190a0454d676d3b60f78ccd6b073f7f8[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Fri May 30 18:58:34 2014 +0200
+
+    Add a publication_date templatetag filter
+    
+    * The publication_date filter changes publication date format considering if the publication date is complete or not
+    * Integrate this filter in the ieeetr bibliography style
+
+[33mcommit e673fe270fed2da6ec2ff1a33f670554f072c218[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Fri May 30 18:44:49 2014 +0200
+
+    Add a test for partial publication date flag ...
+    
+    ... while importing from BibTeX
+
+[33mcommit 42939bccd506958f952ad1d5c8996c8b9a1070b0[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Fri May 30 18:44:23 2014 +0200
+
+    Add support for bibtex month field import
+
+[33mcommit f2eff3629f22334266be1bcda0f7462059663813[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Fri May 30 17:52:00 2014 +0200
+
+    Add is_partial_publication_date field to Entry
+    
+    We need this flag to identify full publication dates (day/month/year) from partial publication dates (year only most of the time).
+    
+    * add admin integration
+    * add south migrations
+
+[33mcommit 99708284517d5e23403ae18a4d5e5ebdc5ba1798[m
+Author: Julien Maupetit <julien@comsource.fr>
+Date:   Fri May 30 17:51:09 2014 +0200
+
+    Ignore build
+
+[33mcommit c5ac89f8f804dd527a1e5f1468f14a4a4d99a956[m
+Merge: 426bba8 25e6332
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Feb 13 12:17:51 2014 +0100
+
+    Merge branch 'hotfix/0.1.5' into develop
+
+[33mcommit 59bf6a29195257009810b5eb51002c507e259c81[m[33m ([m[1;33mtag: 0.1.5[m[33m)[m
+Merge: a1bf11f 25e6332
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Feb 13 12:17:43 2014 +0100
+
+    Merge branch 'hotfix/0.1.5'
+
+[33mcommit 25e63324b464ccc4a5b7acd291f3dfd07e13afab[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Feb 13 12:16:29 2014 +0100
+
+    Fix misplaced quotes around publications titles
+
+[33mcommit 45d1983fa9aeb09342f8b9a196a90a2187028e49[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Feb 13 12:15:55 2014 +0100
+
+    Bump version to 0.1.5
+
+[33mcommit 426bba88c1cf557501f4a0745e8e44ebffd8e83f[m
+Merge: d31caf5 70df96f
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 10 16:46:32 2014 +0100
+
+    Merge branch 'hotfix/0.1.4' into develop
+
+[33mcommit a1bf11fbcd501b67ec467bdd265e6728b82cf9e7[m[33m ([m[1;33mtag: 0.1.4[m[33m)[m
+Merge: 34de620 70df96f
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 10 16:46:26 2014 +0100
+
+    Merge branch 'hotfix/0.1.4'
+
+[33mcommit 70df96fc205bd7059c1eb57ed8e6c996a24b5ddf[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 10 16:45:41 2014 +0100
+
+    Add tests for the new entry get_authors method
+
+[33mcommit e30c56406b372d9d50176bfafd8e04d0dc626ede[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 10 16:44:06 2014 +0100
+
+    Fix issue #9 (add Entry get_authors method)
+    
+    To access an entry authors list, use the Entry.get_authors() method. This ensure authors ordering.
+
+[33mcommit 5e2697b55f1720c4c144840e680004fb28a3cfcc[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 10 16:41:59 2014 +0100
+
+    Add more flexibity to run tests independantly
+
+[33mcommit 4fed92ec9741f6270f487f1b1a106ce07355db24[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 10 16:40:55 2014 +0100
+
+    Fix authors rank in factory
+
+[33mcommit c5224a8eee912bbce404ce2d0847869690dcc5c0[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 10 15:30:55 2014 +0100
+
+    Fix issue #10 (journal abbreviation display)
+
+[33mcommit 5ef8e5092cdcbd2ad9fa5e3f560391c98d4459a1[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 10 14:42:28 2014 +0100
+
+    Bump version to 0.1.4
+
+[33mcommit d31caf58a5765e68d8f758edea63116f4b8a11bc[m
+Merge: b661357 bfb6b0b
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 3 15:19:08 2014 +0100
+
+    Merge branch 'hotfix/0.1.3' into develop
+
+[33mcommit 34de6205a6c4b58022da3112deb8b99769126ae2[m[33m ([m[1;33mtag: 0.1.3[m[33m)[m
+Merge: 1164720 bfb6b0b
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 3 15:18:55 2014 +0100
+
+    Merge branch 'hotfix/0.1.3'
+
+[33mcommit bfb6b0bfdeccad12c050bf0074d2a85bc3e65535[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 3 15:18:21 2014 +0100
+
+    Fix issue #8 (name unpacking)
+
+[33mcommit d25f860c56e4e51203574ee8da4297c7aaa6195a[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Feb 3 15:18:13 2014 +0100
+
+    Bump version to 0.1.3
+
+[33mcommit b6613579aeddedbac02be99e88e54ab7683e05b1[m
+Merge: 2108969 2002f3b
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:58:07 2014 +0100
+
+    Merge branch 'hotfix/0.1.2' into develop
+
+[33mcommit 11647204b16275e1b0d6aca608abaee6a90111f8[m[33m ([m[1;33mtag: 0.1.2[m[33m)[m
+Merge: 7ba6f9b 2002f3b
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:58:00 2014 +0100
+
+    Merge branch 'hotfix/0.1.2'
+
+[33mcommit 2002f3ba475c7021d0eca3a5d16765b0f3e134e5[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:57:28 2014 +0100
+
+    Bump version to 0.1.2 & update module docstring
+
+[33mcommit 921e636ee6ed5927d25dc4f92c14437b2ba5b723[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:57:12 2014 +0100
+
+    Fix typos
+
+[33mcommit 52ccd03918c71f4ade414d55b295c1b5c3019679[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:53:27 2014 +0100
+
+    Add requirements for packaging
+
+[33mcommit 2108969491e7b165050e3dc6f45916d1e76dcb83[m
+Merge: 5828188 540662d
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:39:59 2014 +0100
+
+    Merge branch 'hotfix/0.1.1' into develop
+
+[33mcommit 7ba6f9bdc0451c840205b9c4b6f67455909699ac[m[33m ([m[1;33mtag: 0.1.1[m[33m)[m
+Merge: f237072 540662d
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:39:54 2014 +0100
+
+    Merge branch 'hotfix/0.1.1'
+
+[33mcommit 540662dd68f2702314912b84d8527f6ee6bb73ce[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:39:39 2014 +0100
+
+    Bump version to 0.1.1
+
+[33mcommit ae2aedbfaec22a927a2855d437d47bb25dae4a22[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:38:58 2014 +0100
+
+    Fix installation instruction in the doc
+
+[33mcommit 5828188c7e6883687615ec8894bf753a342f854a[m
+Merge: b092830 f576908
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:33:32 2014 +0100
+
+    Merge branch 'release/0.1' into develop
+
+[33mcommit f237072a19c0e6e6edd39601bacf1bb2bafd9e02[m[33m ([m[1;33mtag: 0.1[m[33m)[m
+Merge: 7d1b0a1 f576908
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:33:27 2014 +0100
+
+    Merge branch 'release/0.1'
+
+[33mcommit f57690882e9648b4c04f14b94267c7eb243f4b84[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:33:19 2014 +0100
+
+    Update changelog for this first release
+
+[33mcommit c7902e104a2eb7ec0b9e8ca1fe2855a8438f265c[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:27:59 2014 +0100
+
+    Bump version to 0.1
+
+[33mcommit b0928301965202faa2a73740658b82dd455bbe4f[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:27:01 2014 +0100
+
+    Minor fix for the release
+
+[33mcommit 92ba0d635639a7a4bd6c77144e5d0d4c596cc848[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:26:32 2014 +0100
+
+    Update documentation for the first public release
+
+[33mcommit 48bbdadadf8be7e62d6af26167455ee7fdd8a52a[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:25:55 2014 +0100
+
+    Add test fixtures (.bib) for packaging
+
+[33mcommit 6ead90ef2cd9396f991b50c901076100de2155b3[m
+Merge: ce606cf 70b83f9
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:13:17 2014 +0100
+
+    Merge branch 'feature/bibtex-parser' into develop
+
+[33mcommit 70b83f9f90625e1238713c1d780337509ae584e4[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:12:38 2014 +0100
+
+    Add test and fixtures for the bibtex_import command
+
+[33mcommit ef43052df23c04bae792873e45135295d2999e0e[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:12:09 2014 +0100
+
+    Add a missing test for models
+
+[33mcommit bae6df7ed8d4a1ab1c25902175f6b9711b604e6b[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 16:11:02 2014 +0100
+
+    Add logging info to the bibtex_import command
+
+[33mcommit 9f6e816b1a2f55b400b03287c92ceae209a4a704[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 10 15:23:58 2014 +0100
+
+    Customize bibtexparser record post-treatments
+
+[33mcommit 3d6f0509423b0948343d34ffbf654fe623fb97ab[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 18:06:06 2014 +0100
+
+    Add an admin command line for bibtex import
+
+[33mcommit 0978762cf2fdf87a5203059cc103ad0c9f16f694[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 18:03:47 2014 +0100
+
+    First draft for the bibtex importation tool
+
+[33mcommit 167da4199f350ed37c2f2ab813b90b80cc605e21[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 18:01:24 2014 +0100
+
+    Improve the Entry unicode representation
+
+[33mcommit 6cec883af765e229d928719b4a8f17b41c05bb70[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 18:00:47 2014 +0100
+
+    Add bibtexparser as a dependency
+
+[33mcommit ce606cf2b97a9c01bd499b4b2321c5315a6becc9[m
+Merge: c21c7fe ee5ea66
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 14:53:34 2014 +0100
+
+    Merge branch 'feature/author-position' into develop
+
+[33mcommit ee5ea66b3218de9d59ae192e701e456a41b86597[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 14:51:56 2014 +0100
+
+    Add tests for the new AuthorEntryRank model
+    
+    Test coverage is now back to 100%
+
+[33mcommit c9d8734de64c046695b3a3f969ce0d6eb4593f06[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 14:51:21 2014 +0100
+
+    Update AuthorEntryRank unicode representation
+
+[33mcommit 49a5deabcff2087ddfae639ab7ff43b9163bf2c6[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 14:26:23 2014 +0100
+
+    Fix tests for the new Entry-Authors relashionship
+
+[33mcommit 3050badf4b8a5ff15e3fe7dd485dcb8936f5d27e[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 14:25:19 2014 +0100
+
+    Add EntryWithStaticAuthorsFactory
+
+[33mcommit b1056f2c8282115fdacf8e3008cfb512dca1af29[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 12:49:53 2014 +0100
+
+    Add EntryWithAuthorsFactory
+
+[33mcommit 53d398dc74ac9e8ae1bdb9dc2adbff628c20481f[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 12:49:14 2014 +0100
+
+    Allow Entry authors (+rank) inline edition in the admin
+
+[33mcommit 504a7b421a25eda458564ddbc24722fb3bd50522[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 9 12:46:31 2014 +0100
+
+    Add an intermediate AuthorEntryRank model
+    
+    Primary work on issue #1
+
+[33mcommit c21c7fee6be006686c3b04a613f6c3b34a6feae3[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Sat Jan 4 00:01:45 2014 +0100
+
+    Add tests for the Author/User mapping
+
+[33mcommit 2e763d8e5688e2dd8ec4ebdbb74752a1d41b24ae[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Sat Jan 4 00:01:10 2014 +0100
+
+    Add test for collection filtering in the EntryListView
+
+[33mcommit 3663cbdc2ccd2bf28cd0fb838b06122eaed404db[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 23:40:48 2014 +0100
+
+    Add Author/User mapping method to AbstractHuman
+    
+    First step to fix issue #3
+
+[33mcommit 9575a84286c5724f09adfd65a748c5081da3d934[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 22:59:02 2014 +0100
+
+    Improve admin interface performance and usability
+
+[33mcommit 6c345716946d883876132c95a148f8f02210128e[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 22:44:37 2014 +0100
+
+    Display the collection size in admin list
+
+[33mcommit 6a396aadda50e92a7c59fb43548ca13e2c33c74b[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 22:32:55 2014 +0100
+
+    Add EntryListView collection filter - Fix issue #4
+    
+    The most part of the work now should be: automatically generate collections from lab teams and platforms. This should be managed outside from this app.
+
+[33mcommit 6af0026ee9253612554f11e8b200e69f383611e7[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 20:26:20 2014 +0100
+
+    Improve Entry model admin
+    
+    Fix issue #5
+
+[33mcommit 388419b321d82d8d51c5887d9dd3df85b38b8726[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 19:54:25 2014 +0100
+
+    Add an example of bibliography custom style
+    
+    This is the first step to implement the issue #2
+
+[33mcommit 12aa2ad1db8e9a058f39ae601fa13090ca664498[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 09:10:54 2014 +0100
+
+    Add a legend to publications stats
+
+[33mcommit e1c88f649f4d33dbf11d6927acc1d3cbf0c954d1[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 09:09:46 2014 +0100
+
+    Update Entry admin required fields and improve help texts
+
+[33mcommit 2d3251c3551e40125271a3b5baf1a2e0a48478c8[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 00:37:59 2014 +0100
+
+    EntryListView date filtering must be restricted to current queryset
+
+[33mcommit 3e1df71833d0fd45b771010e2f567e4e5db3f13c[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 00:34:57 2014 +0100
+
+    Add journals metric to the EntryListView
+
+[33mcommit e34f44a32dbb5bd85a0b21eb4691563f4dfe54a8[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 00:28:30 2014 +0100
+
+    Add more assertions for context testing
+
+[33mcommit db0ba7c5736de87e1c74de3e3c9663a9b3d9c475[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 00:24:48 2014 +0100
+
+    Add tests for the EntryListView filtering
+
+[33mcommit 1dfd79692470430a93c08b3f0bdb59290548a6b6[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Fri Jan 3 00:00:11 2014 +0100
+
+    Add by Author EntryListView filtering
+
+[33mcommit 307b513f2b6ca32547f912437f58000519972d3e[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 2 23:21:09 2014 +0100
+
+    Update an Entry representation and related test
+
+[33mcommit c80b1400e8fb685a983a87340b7c4cbbe6f91eec[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 2 22:36:37 2014 +0100
+
+    Fix pep8
+
+[33mcommit 4cf38effdf57bb84463ace1c59ade8aef6f51334[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 2 22:35:59 2014 +0100
+
+    Increase tests to 100% code coverage.
+    
+    w00t!
+
+[33mcommit f66659710a39ce6569f0c38342efd0965854a184[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 2 19:58:12 2014 +0100
+
+    We don't need to test standard factories
+
+[33mcommit f78939598402d8b3a3a43eecae24500aa9ba83a8[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 2 19:57:24 2014 +0100
+
+    Improve EntryList DOM for semantic purpose
+
+[33mcommit ab364d74239cf87b390b7b0191709407f4ab4a90[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Jan 2 19:55:53 2014 +0100
+
+    The AbstractHuman _set_first_initial method should not return anything
+
+[33mcommit 4f55fe2813e43bac1bc939d493b63478ced19910[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Dec 31 17:26:42 2013 +0100
+
+    Add tests for the EntryListView
+    
+    * Modify running tests settings
+    * Add a default _layout/base.html template to inherit from
+    * Add 5 tests for now
+    
+    Known issue: we need to refine per page testing combined with qs filtering
+
+[33mcommit 609fb740da08061476e7b44beaafb0bf2d2d78c2[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Dec 31 12:08:02 2013 +0100
+
+    Fix and add more tests for Entry model qs ordering
+    
+    * fix the base test by explicitly setting the publication date
+    * add a specific test for ordering (ids order is not publication dates order)
+
+[33mcommit 2761fc1dfb8fa8c7f7951dd3c83f2ae37d29e97b[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Dec 31 12:01:17 2013 +0100
+
+    Refactor the EntryListView
+    
+    * separate parameter checking from context modification
+    * ease testing
+
+[33mcommit 9fd33cb14bb54d31af6d84d7ec906f6d1f10117b[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Dec 31 12:00:42 2013 +0100
+
+    Add configuration file for coverage
+
+[33mcommit a0b098816611a48c50c4d2a832a588218822aa76[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Dec 31 11:48:31 2013 +0100
+
+    Improve DOM semantic
+
+[33mcommit 9011177ae5f5bd0072300e96a531224b3d9491b5[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Dec 30 16:35:48 2013 +0100
+
+    Add functionnal filtering to entry list
+
+[33mcommit 78f768cddd20dc3660d5347a0ab32a21577c73c5[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Dec 30 14:01:59 2013 +0100
+
+    Auto-submit entry list filtering on form change
+    
+    Add a new javascript (jQuery script) to all layouts
+
+[33mcommit 4cb3aff6fd2de0ee6406a4cc6f0c871193d63cb8[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Dec 30 13:41:26 2013 +0100
+
+    Add entry list basic view
+
+[33mcommit e8eda2323b3486d1c88ffb0d5fd9ac7efca555d1[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Mon Dec 30 13:40:54 2013 +0100
+
+    Add first author to entry admin list display
+
+[33mcommit 9656208c1b39878715940f5ade3e8f66f0a67adf[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 21:32:08 2013 +0100
+
+    Update admin display, ordering and filters
+
+[33mcommit 399cd799ae993412a6ad2455b8e11f4019aa9509[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 21:19:44 2013 +0100
+
+    Add models admin
+
+[33mcommit 8e21fa6b00cf0fc2da9f2d28d3ca6777db83ef8a[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 20:53:33 2013 +0100
+
+    Add a test for django user/author linking
+
+[33mcommit 42f249521a64406507b3d5e41d4139e94f5d1487[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 20:45:45 2013 +0100
+
+    Removed useless duplicated test for the AbstractHuman model
+
+[33mcommit 4fd89c7652c5176309e65a024d54f18c9c329285[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 20:42:47 2013 +0100
+
+    Fix pep8
+
+[33mcommit 8aa5546b428f9b632920d1a4b789ce36d13f863d[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 20:41:08 2013 +0100
+
+    Add tests for all current models
+
+[33mcommit 0c94f559b87b4525f2ae9905cae2ec14b45482ce[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 20:39:39 2013 +0100
+
+    Fix abstract factories and refine the CollectionFactory
+    
+    Since we use the FuzzyText attribute, factory-boy>=2.3.0 is now required
+
+[33mcommit 1daf4790c2c10ba23f0aae618e72980efaef215b[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 19:31:20 2013 +0100
+
+    Configure app tests running
+
+[33mcommit b7e8c863d83b03419360f74eba7e0078a0081660[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 14:55:43 2013 +0100
+
+    Implement the EntryFactory
+
+[33mcommit 5f2a34986fee70fbdae8a123e55df2404a66c5a3[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 14:54:46 2013 +0100
+
+    Upgrade local development dependencies
+
+[33mcommit 708e766c8bf869d4271346cd8ff10bfdd25e2b0a[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 14:43:32 2013 +0100
+
+    Some more work on models
+    
+    * Human `initials` field as been renamed `first_initial`
+    * Entry `publisher` field may be null
+
+[33mcommit 0f9940244834f3b9ba711dbb9b94fbd785ff0497[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 13:28:17 2013 +0100
+
+    Implement the JournalFactory
+
+[33mcommit 8245693932cf329e92894be64324d619b3a7339b[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Thu Dec 26 13:22:52 2013 +0100
+
+    Fix setup script
+
+[33mcommit 57f6b104feaafae5c37eb12e0e7442bf4a97ef6b[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Dec 24 10:06:52 2013 +0100
+
+    First draft for dynamic fixtures generation
+
+[33mcommit 21e8955c5b7f13d790dc5d6c8081313f421f8d01[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Dec 24 10:06:14 2013 +0100
+
+    Add names and loremipsum dependencies for fixture generation
+
+[33mcommit 5429317a1d22111343217a8dd10c685e49f0b7d2[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Dec 24 10:05:41 2013 +0100
+
+    Fix AbstractHuman model save method
+
+[33mcommit 972db7986ba973bfba2b9ba3853cac75a7cc4f12[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Tue Dec 24 09:21:14 2013 +0100
+
+    Set Publisher and Journal models as entities
+
+[33mcommit b5056a886d1a033f26fe109414d223e9e5fc7626[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Wed Nov 20 23:50:27 2013 +0100
+
+    First draft for models
+
+[33mcommit 652788e911ff468380252b98064a99a39276ee76[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Wed Nov 20 16:44:47 2013 +0100
+
+    Update project base informations
+
+[33mcommit c7ce637c0df93b7d7b4d26f7ee50005c62f1095f[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Wed Nov 20 16:29:12 2013 +0100
+
+    First import of the template app
+
+[33mcommit 7d1b0a1246c45da157b342d14e34e024e4dddd92[m
+Author: Julien Maupetit <julien@maupetit.net>
+Date:   Wed Nov 20 16:28:34 2013 +0100
+
+    Initial commit

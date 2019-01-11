@@ -1,5 +1,6 @@
 [flake8]
 exclude = */docs/*,*/.tox/*,*/.venv/*,*/.pycharm_helpers/*,*/migrations/*,docs/*,fabfile.py,*/__init__.py,secret.py
+# PEP standard wrap line length
 max-line-length = 79
 
 # E12x continuation line indentation

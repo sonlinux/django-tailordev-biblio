@@ -6,6 +6,15 @@ import random
 from factory.django import DjangoModelFactory
 from factory.fuzzy import BaseFuzzyAttribute
 
+import td_biblio.models.abstract_entity
+import td_biblio.models.abstract_human
+import td_biblio.models.author
+import td_biblio.models.author_entry_rank
+import td_biblio.models.collection
+import td_biblio.models.editor
+import td_biblio.models.entry
+import td_biblio.models.journal
+import td_biblio.models.publisher
 from . import models
 
 
@@ -27,7 +36,7 @@ JOURNAL_CHOICES = [
     ),
 ]
 
-ENTRY_TYPES_RAW_CHOICES = [c[0] for c in models.Entry.ENTRY_TYPES_CHOICES]
+ENTRY_TYPES_RAW_CHOICES = [c[0] for c in td_biblio.models.entry.Entry.ENTRY_TYPES_CHOICES]
 
 
 # Custom fuzzy attributes definition
@@ -59,23 +68,23 @@ class AbstractHumanFactory(DjangoModelFactory):
     last_name = factory.Faker("last_name")
 
     class Meta:
-        model = models.AbstractHuman
+        model = td_biblio.models.abstract_human.AbstractHuman
         abstract = True
 
 
 class AuthorFactory(AbstractHumanFactory):
     class Meta:
-        model = models.Author
+        model = td_biblio.models.author.Author
 
 
 class EditorFactory(AbstractHumanFactory):
     class Meta:
-        model = models.Editor
+        model = td_biblio.models.editor.Editor
 
 
 class AbstractEntityFactory(DjangoModelFactory):
     class Meta:
-        model = models.AbstractEntity
+        model = td_biblio.models.abstract_entity.AbstractEntity
         abstract = True
 
 
@@ -85,13 +94,13 @@ class JournalFactory(AbstractEntityFactory):
     abbreviation = factory.Iterator(JOURNAL_CHOICES, getter=lambda c: c[0])
 
     class Meta:
-        model = models.Journal
+        model = td_biblio.models.journal.Journal
         django_get_or_create = ("abbreviation",)
 
 
 class PublisherFactory(AbstractEntityFactory):
     class Meta:
-        model = models.Publisher
+        model = td_biblio.models.publisher.Publisher
 
 
 class EntryFactory(DjangoModelFactory):
@@ -105,7 +114,7 @@ class EntryFactory(DjangoModelFactory):
     pages = FuzzyPages(1, 2000)
 
     class Meta:
-        model = models.Entry
+        model = td_biblio.models.entry.Entry
 
 
 class CollectionFactory(DjangoModelFactory):
@@ -114,7 +123,7 @@ class CollectionFactory(DjangoModelFactory):
     short_description = factory.fuzzy.FuzzyText(length=42)
 
     class Meta:
-        model = models.Collection
+        model = td_biblio.models.collection.Collection
 
     # m2m
     @factory.post_generation
@@ -134,7 +143,7 @@ class AuthorEntryRankFactory(DjangoModelFactory):
     rank = factory.Iterator(range(1, 4), cycle=True)
 
     class Meta:
-        model = models.AuthorEntryRank
+        model = td_biblio.models.author_entry_rank.AuthorEntryRank
 
 
 class EntryWithAuthorsFactory(EntryFactory):

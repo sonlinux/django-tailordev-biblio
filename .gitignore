@@ -123,3 +123,9 @@ deployment/static
 deployment/media
 deployment/docker/71-apt-cacher-ng
 core/settings/secret.py
+.idea/
+REQUIREMENTS-dev.txt
+REQUIREMENTS.txt
+core/
+deployment/
+manage.py
