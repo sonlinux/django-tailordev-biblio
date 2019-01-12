@@ -239,7 +239,8 @@ LICENSE file for details.
 Thank you
 _________
 
-Thank you to the individual contributors who have helped to build HealthyRivers:
+Thank you to the individual contributors who have helped to build 
+Django-TailorDev-Biblio:
 
 * Julien Maupetit (Lead developer)
 * Alison Mukoma: mukomalison@gmail.com :nerd_face:

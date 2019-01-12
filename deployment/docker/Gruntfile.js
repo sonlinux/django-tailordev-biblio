@@ -7,11 +7,11 @@ module.exports = function(grunt) {
         requirejs: {
             compile: {
                 options: {
-                    baseUrl: '/home/web/django_project/fish/static/js',
-                    mainConfigFile: '/home/web/django_project/fish/static/js/app.js',
+                    baseUrl: '/home/web/django_project/td_biblio/static/js',
+                    mainConfigFile: '/home/web/django_project/td_biblio/static/js/app.js',
                     name: 'libs/almond/almond',
                     include: ['app.js'],
-                    out: '/home/web/django_project/fish/static/js/optimized.js'
+                    out: '/home/web/django_project/td_biblio/static/js/optimized.js'
                 }
             }
         }

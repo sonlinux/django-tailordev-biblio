@@ -245,7 +245,8 @@ db-fresh-restore:
 	@echo "------------------------------------------------------------------"
 	-@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "dropdb gis"
 	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "createdb -O docker -T template_postgis gis"
-	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "psql gis -f /sql/fish-old.sql"
+	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "psql gis -f
+	/sql/td_biblio-old.sql"
 	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "psql gis -f /sql/migration.sql"
 
 dbbackup:
