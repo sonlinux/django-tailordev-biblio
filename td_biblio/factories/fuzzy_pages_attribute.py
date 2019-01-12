@@ -4,6 +4,7 @@ from factory.fuzzy import BaseFuzzyAttribute
 
 # Custom fuzzy attributes definition
 
+
 class FuzzyPages(BaseFuzzyAttribute):
     """Random pages numbers separated by double-hyphens"""
 

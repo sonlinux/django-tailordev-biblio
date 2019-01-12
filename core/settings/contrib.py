@@ -8,7 +8,7 @@ import os
 
 try:
     from django.core.urlresolvers import reverse_lazy
-except:
+except Exception as e:
     from django.urls import reverse_lazy
 
 import dj_database_url
@@ -48,7 +48,7 @@ INSTALLED_APPS += (
     'allauth.socialaccount.providers.github',
     'easyaudit',
     'rolepermissions',
-    'rest_framework', # for future API needs
+    'rest_framework',  # for future API needs
     'whitenoise.runserver_nostatic',
     'celery',
     'pipeline',

@@ -24,7 +24,8 @@ class PublicationDateFilterTests(TestCase):
 
         # Special entry with an incomplete publication date
         EntryFactory(
-            publication_date=datetime.date(1980, 1, 1), is_partial_publication_date=True
+            publication_date=datetime.date(1980, 1, 1),
+            is_partial_publication_date=True
         )
         self.url = reverse("td_biblio:entry_list")
 
@@ -36,4 +37,5 @@ class PublicationDateFilterTests(TestCase):
         self.assertContains(response, publication_date_block, count=5)
 
         publication_date_block = '<span class="publication_date">1980.</span>'
-        self.assertContains(response, publication_date_block, count=1, html=True)
+        self.assertContains(response, publication_date_block, count=1,
+                            html=True)

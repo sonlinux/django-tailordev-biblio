@@ -140,7 +140,8 @@ class BaseLoader(object):
                 last_name=record_author["last_name"],
             )
 
-            AuthorEntryRank.objects.get_or_create(entry=entry, author=author, rank=rank)
+            AuthorEntryRank.objects.get_or_create(entry=entry,
+                                                  author=author, rank=rank)
         logger.debug("(New) Entry imported with success: {}".format(entry))
 
     def save_records(self):
@@ -173,7 +174,8 @@ class BibTeXLoader(BaseLoader):
 
         # Publication date
         pub_date = {"day": 1, "month": 1, "year": 1900}
-        input_date = dict((k, v) for (k, v) in input.items() if k in pub_date.keys())
+        input_date = dict((k, v) for (k, v) in input.items() if k in
+                          pub_date.keys())
         pub_date.update(input_date)
         # Check if month is numerical or not
         try:
@@ -263,7 +265,8 @@ class PubmedLoader(BaseLoader):
                     "An error occured while loading the following PMID: {}. "
                     "Check logs for details."
                 ).format(entry.pmid)
-                logger.error("{}, error: {} [{}], data: {}".format(msg, e, v, entry))
+                logger.error("{}, error: {} [{}], data: {}".format(msg, e,
+                                                                   v, entry))
                 raise PMIDLoaderError(msg)
             self.records.append(record)
 
@@ -301,7 +304,8 @@ class DOILoader(BaseLoader):
         record = {
             "title": input.get("title", ""),
             "authors": [
-                {"first_name": a.get("given", ""), "last_name": a.get("family", "")}
+                {"first_name": a.get("given", ""), "last_name": a.get(
+                    "family", "")}
                 for a in input.get("author")
             ],
             "journal": journal,
@@ -333,6 +337,7 @@ class DOILoader(BaseLoader):
                     "An error occured while loading the following DOI: {}. "
                     "Check logs for details."
                 ).format(data.get("DOI"))
-                logger.error("{}, error: {} [{}], data: {}".format(msg, e, v, data))
+                logger.error("{}, error: {} [{}], data: {}".format(msg, e,
+                                                                   v, data))
                 raise DOILoaderError(msg)
             self.records.append(record)

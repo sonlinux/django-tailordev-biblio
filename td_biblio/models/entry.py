@@ -61,7 +61,8 @@ class Entry(models.Model):
     )
 
     type = models.CharField(
-        _("Entry type"), max_length=50, choices=ENTRY_TYPES_CHOICES, default=ARTICLE
+        _("Entry type"), max_length=50, choices=ENTRY_TYPES_CHOICES,
+        default=ARTICLE
     )
 
     # Base fields
@@ -101,10 +102,12 @@ class Entry(models.Model):
         _("Pages"),
         max_length=50,
         blank=True,
-        help_text=_("Page numbers, separated either by commas or " "double-hyphens"),
+        help_text=_("Page numbers, separated either by commas "
+                    "or " "double-hyphens"),
     )
     url = models.URLField(
-        _("URL"), blank=True, help_text=_("The WWW address where to find this resource")
+        _("URL"), blank=True, help_text=_("The WWW address where to find "
+                                          "this resource")
     )
 
     # Identifiers
@@ -135,7 +138,8 @@ class Entry(models.Model):
         _("Book title"),
         max_length=50,
         blank=True,
-        help_text=_("The title of the book, if only part of it is being cited"),
+        help_text=_("The title of the book, if only part of it is being "
+                    "cited"),
     )
     edition = models.CharField(
         _("Edition"),
@@ -164,7 +168,8 @@ class Entry(models.Model):
     )
 
     # Misc
-    editors = models.ManyToManyField("Editor", related_name="entries", blank=True)
+    editors = models.ManyToManyField("Editor", related_name="entries",
+                                     blank=True)
     publisher = models.ForeignKey(
         "Publisher",
         related_name="entries",
@@ -185,7 +190,8 @@ class Entry(models.Model):
         _("Annote"),
         max_length=250,
         blank=True,
-        help_text=_("An annotation for annotated bibliography styles (not typical)"),
+        help_text=_("An annotation for annotated bibliography styles (not "
+                    "typical)"),
     )
     note = models.TextField(
         _("Note"), blank=True, help_text=_("Miscellaneous extra information")

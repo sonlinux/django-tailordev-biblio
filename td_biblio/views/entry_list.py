@@ -1,7 +1,7 @@
 import datetime
 import logging
 
-from django.views.generic import  ListView
+from django.views.generic import ListView
 
 from td_biblio.models.author import Author
 from td_biblio.models.entry import Entry

@@ -25,6 +25,6 @@ USE_X_FORWARDED_HOST = True
 # Set debug to false for production
 DEBUG = TEMPLATE_DEBUG = False
 
-SERVER_EMAIL = '' # existing email n33ds to be added
+SERVER_EMAIL = ''  # existing email n33ds to be added
 EMAIL_HOST = 'tailordev.fr'
 DEFAULT_FROM_EMAIL = 'info@tailordev.fr'

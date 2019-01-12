@@ -28,7 +28,8 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "first_name",
-                    models.CharField(max_length=100, verbose_name="First name"),
+                    models.CharField(max_length=100, verbose_name="First "
+                                                                  "name"),
                 ),
                 (
                     "last_name",
@@ -37,7 +38,8 @@ class Migration(migrations.Migration):
                 (
                     "first_initial",
                     models.CharField(
-                        blank=True, max_length=10, verbose_name="First Initial(s)"
+                        blank=True, max_length=10, verbose_name="First "
+                                                                "Initial(s)"
                     ),
                 ),
                 (
@@ -101,7 +103,8 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("name", models.CharField(max_length=100, verbose_name="Name")),
+                ("name", models.CharField(max_length=100,
+                                          verbose_name="Name")),
                 (
                     "short_description",
                     models.TextField(
@@ -128,7 +131,8 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "first_name",
-                    models.CharField(max_length=100, verbose_name="First name"),
+                    models.CharField(max_length=100, verbose_name="First "
+                                                                  "name"),
                 ),
                 (
                     "last_name",
@@ -137,7 +141,8 @@ class Migration(migrations.Migration):
                 (
                     "first_initial",
                     models.CharField(
-                        blank=True, max_length=10, verbose_name="First Initial(s)"
+                        blank=True, max_length=10, verbose_name="First "
+                                                                "Initial(s)"
                     ),
                 ),
                 (
@@ -178,7 +183,8 @@ class Migration(migrations.Migration):
                             ("conference", "Conference"),
                             ("inbook", "Book chapter"),
                             ("incollection", "Book from a collection"),
-                            ("inproceedings", "Conference proceedings article"),
+                            ("inproceedings", "Conference proceedings "
+                                              "article"),
                             ("manual", "Technical documentation"),
                             ("mastersthesis", "Master's Thesis"),
                             ("misc", "Miscellaneous"),
@@ -192,16 +198,20 @@ class Migration(migrations.Migration):
                         verbose_name="Entry type",
                     ),
                 ),
-                ("title", models.CharField(max_length=255, verbose_name="Title")),
+                ("title", models.CharField(max_length=255,
+                                           verbose_name="Title")),
                 (
                     "publication_date",
-                    models.DateField(null=True, verbose_name="Publication date"),
+                    models.DateField(null=True, verbose_name="Publication "
+                                                             "date"),
                 ),
                 (
                     "is_partial_publication_date",
                     models.BooleanField(
                         default=True,
-                        help_text="Check this if the publication date is incomplete (for example if only the year is valid)",
+                        help_text="Check this if the publication date "
+                                  "isincomplete (for example if only the "
+                                  "year is valid)",
                         verbose_name="Partial publication date?",
                     ),
                 ),
@@ -209,7 +219,8 @@ class Migration(migrations.Migration):
                     "volume",
                     models.CharField(
                         blank=True,
-                        help_text="The volume of a journal or multi-volume book",
+                        help_text="The volume of a journal or multi-volume "
+                                  "book",
                         max_length=50,
                         verbose_name="Volume",
                     ),
@@ -218,7 +229,10 @@ class Migration(migrations.Migration):
                     "number",
                     models.CharField(
                         blank=True,
-                        help_text="The '(issue) number' of a journal, magazine, or tech-report, if applicable. (Most publications have a 'volume', but no 'number' field.)",
+                        help_text="The '(issue) number' of a journal, "
+                                  "magazine, or tech-report, if applicable. "
+                                  "(Most publications have a 'volume', "
+                                  "but no 'number' field.)",
                         max_length=50,
                         verbose_name="Number",
                     ),
@@ -227,7 +241,8 @@ class Migration(migrations.Migration):
                     "pages",
                     models.CharField(
                         blank=True,
-                        help_text="Page numbers, separated either by commas or double-hyphens",
+                        help_text="Page numbers, separated either by commas "
+                                  "or double-hyphens",
                         max_length=50,
                         verbose_name="Pages",
                     ),
@@ -236,7 +251,8 @@ class Migration(migrations.Migration):
                     "url",
                     models.URLField(
                         blank=True,
-                        help_text="The WWW address where to find this resource",
+                        help_text="The WWW address where to find this "
+                                  "resource",
                         verbose_name="URL",
                     ),
                 ),
@@ -244,7 +260,8 @@ class Migration(migrations.Migration):
                     "doi",
                     models.CharField(
                         blank=True,
-                        help_text="Digital Object Identifier for this resource",
+                        help_text="Digital Object Identifier for this "
+                                  "resource",
                         max_length=100,
                         verbose_name="DOI",
                     ),
@@ -280,7 +297,8 @@ class Migration(migrations.Migration):
                     "booktitle",
                     models.CharField(
                         blank=True,
-                        help_text="The title of the book, if only part of it is being cited",
+                        help_text="The title of the book, if only part of it "
+                                  "is being cited",
                         max_length=50,
                         verbose_name="Book title",
                     ),
@@ -289,7 +307,8 @@ class Migration(migrations.Migration):
                     "edition",
                     models.CharField(
                         blank=True,
-                        help_text="The edition of a book, long form (such as 'First' or 'Second')",
+                        help_text="The edition of a book, long form "
+                                  "(such as 'First' or 'Second')",
                         max_length=100,
                         verbose_name="Edition",
                     ),
@@ -297,7 +316,8 @@ class Migration(migrations.Migration):
                 (
                     "chapter",
                     models.CharField(
-                        blank=True, max_length=50, verbose_name="Chapter number"
+                        blank=True, max_length=50, verbose_name="Chapter "
+                                                                "number"
                     ),
                 ),
                 (
@@ -322,7 +342,9 @@ class Migration(migrations.Migration):
                     "address",
                     models.CharField(
                         blank=True,
-                        help_text="Publisher's address (usually just the city, but can be the full address for lesser-known publishers)",
+                        help_text="Publisher's address (usually just the "
+                                  "city, but can be the full address for "
+                                  "lesser-known publishers)",
                         max_length=250,
                         verbose_name="Address",
                     ),
@@ -331,7 +353,8 @@ class Migration(migrations.Migration):
                     "annote",
                     models.CharField(
                         blank=True,
-                        help_text="An annotation for annotated bibliography styles (not typical)",
+                        help_text="An annotation for annotated bibliography "
+                                  "styles (not typical)",
                         max_length=250,
                         verbose_name="Annote",
                     ),
@@ -363,7 +386,8 @@ class Migration(migrations.Migration):
                 (
                     "editors",
                     models.ManyToManyField(
-                        blank=True, related_name="entries", to="td_biblio.Editor"
+                        blank=True, related_name="entries",
+                        to="td_biblio.Editor"
                     ),
                 ),
             ],
@@ -385,7 +409,8 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("name", models.CharField(max_length=150, verbose_name="Name")),
+                ("name", models.CharField(max_length=150,
+                                          verbose_name="Name")),
                 (
                     "abbreviation",
                     models.CharField(
@@ -396,7 +421,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={"verbose_name": "Journal", "verbose_name_plural": "Journals"},
+            options={"verbose_name": "Journal",
+                     "verbose_name_plural": "Journals"},
         ),
         migrations.CreateModel(
             name="Publisher",
@@ -410,7 +436,8 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("name", models.CharField(max_length=150, verbose_name="Name")),
+                ("name", models.CharField(max_length=150,
+                                          verbose_name="Name")),
                 (
                     "abbreviation",
                     models.CharField(
@@ -421,7 +448,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={"verbose_name": "Publisher", "verbose_name_plural": "Publishers"},
+            options={"verbose_name": "Publisher",
+                     "verbose_name_plural": "Publishers"},
         ),
         migrations.AddField(
             model_name="entry",
@@ -454,7 +482,8 @@ class Migration(migrations.Migration):
             model_name="authorentryrank",
             name="entry",
             field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, to="td_biblio.Entry"
+                on_delete=django.db.models.deletion.CASCADE,
+                to="td_biblio.Entry"
             ),
         ),
     ]

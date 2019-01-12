@@ -72,7 +72,8 @@ class EntryAdmin(admin.ModelAdmin):
         ("Cross References", {"fields": ("crossref",)}),
     )
     inlines = (AuthorEntryRankInline,)
-    list_display = ("title", "first_author", "type", "publication_date", "journal")
+    list_display = ("title", "first_author", "type", "publication_date",
+                    "journal")
     list_filter = ("publication_date", "journal", "authors")
     list_per_page = 20
     list_select_related = True

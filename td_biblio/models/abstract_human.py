@@ -13,11 +13,13 @@ class AbstractHuman(models.Model):
 
     first_name = models.CharField(_("First name"), max_length=100)
     last_name = models.CharField(_("Last name"), max_length=100)
-    first_initial = models.CharField(_("First Initial(s)"), max_length=10, blank=True)
+    first_initial = models.CharField(_("First Initial(s)"), max_length=10,
+                                     blank=True)
 
     # This is a django user
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL, blank=True, null=True, on_delete=models.CASCADE
+        settings.AUTH_USER_MODEL, blank=True, null=True,
+        on_delete=models.CASCADE
     )
 
     alias = models.ForeignKey(

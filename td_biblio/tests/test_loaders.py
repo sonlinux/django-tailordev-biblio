@@ -63,7 +63,8 @@ class BibTexLoaderTests(TestCase):
 
     def _test_entry_authors(self, entry, expected_authors):
         for rank, author in enumerate(entry.get_authors()):
-            self.assertEqual(author.get_formatted_name(), expected_authors[rank])
+            self.assertEqual(author.get_formatted_name(), expected_authors[
+                rank])
 
     def test_author_rank(self):
         """
@@ -90,7 +91,8 @@ class BibTexLoaderTests(TestCase):
 
         # Case 2
         entry = Entry.objects.get(title__startswith="fpocket")
-        expected_authors = ["Schmidtke P", "Le Guilloux V", "Maupetit J", "Tufféry P"]
+        expected_authors = ["Schmidtke P", "Le Guilloux V", "Maupetit J",
+                            "Tufféry P"]
         self._test_entry_authors(entry, expected_authors)
 
     def test_partial_publication_date(self):
@@ -151,7 +153,8 @@ class PubmedLoaderTests(TestCase):
         self.assertEqual(record["number"], expected["number"])
         self.assertEqual(record["pages"], expected["pages"])
         self.assertEqual(record["year"], expected["year"])
-        self.assertEqual(record["publication_date"], expected["publication_date"])
+        self.assertEqual(record["publication_date"], expected[
+            "publication_date"])
         self.assertEqual(
             record["is_partial_publication_date"],
             expected["is_partial_publication_date"],
@@ -262,7 +265,8 @@ class DOILoaderTests(TestCase):
         self.assertEqual(record["number"], expected["number"])
         self.assertEqual(record["pages"], expected["pages"])
         self.assertEqual(record["year"], expected["year"])
-        self.assertEqual(record["publication_date"], expected["publication_date"])
+        self.assertEqual(record["publication_date"], expected[
+            "publication_date"])
         self.assertEqual(
             record["is_partial_publication_date"],
             expected["is_partial_publication_date"],

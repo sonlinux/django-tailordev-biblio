@@ -18,7 +18,8 @@ from td_biblio.views.mixins import LoginRequiredMixin, SuperuserRequiredMixin
 logger = logging.getLogger("td_biblio")
 
 
-class EntryBatchImportView(LoginRequiredMixin, SuperuserRequiredMixin, FormView):
+class EntryBatchImportView(LoginRequiredMixin, SuperuserRequiredMixin,
+                           FormView):
 
     form_class = EntryBatchImportForm
     template_name = "td_biblio/entry_import.html"

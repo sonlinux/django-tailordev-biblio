@@ -3,7 +3,7 @@
 from .dev import *  # noqa
 
 ALLOWED_HOSTS = ['*',
-                 u'0.0.0.0','tailordev-biblio.herokuapp.com']
+                 u'0.0.0.0', 'tailordev-biblio.herokuapp.com']
 
 ADMINS = ()
 

@@ -177,7 +177,8 @@ class EntryListViewTests(TestCase):
         """
         # Get a valid date
         entry = Entry.objects.get(id=1)
-        params = {"author": entry.first_author.id, "year": entry.publication_date.year}
+        params = {"author": entry.first_author.id,
+                  "year": entry.publication_date.year}
 
         self._test_filtering(**params)
 
@@ -194,7 +195,8 @@ class EntryListViewTests(TestCase):
         self.assertEqual(response.context["current_publication_year"], date)
 
         self.assertEqual(
-            response.context["n_publications_filter"], self.n_publications_per_year
+            response.context["n_publications_filter"],
+            self.n_publications_per_year
         )
 
     def test_get_context_data(self):
@@ -211,9 +213,11 @@ class EntryListViewTests(TestCase):
         publication_years = [datetime.date(y, 1, 1) for y in years_range]
 
         # Context
-        self.assertEqual(response.context["n_publications_total"], self.n_publications)
+        self.assertEqual(response.context["n_publications_total"],
+                         self.n_publications)
 
-        self.assertEqual(response.context["n_publications_filter"], self.n_publications)
+        self.assertEqual(response.context["n_publications_filter"],
+                         self.n_publications)
 
         self.assertListEqual(
             list(response.context["publication_years"]), publication_years
@@ -256,13 +260,15 @@ class EntryBatchImportViewTests(TestCase):
         self.assertRedirects(response, login_redirect_url)
 
         # Log user as a normal user
-        self.client.login(username=self.user.username, password=self.fake_password)
+        self.client.login(username=self.user.username,
+                          password=self.fake_password)
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, login_redirect_url)
 
         # Log user as a normal user
-        self.client.login(username=self.user.username, password=self.fake_password)
+        self.client.login(username=self.user.username,
+                          password=self.fake_password)
 
         # A standard user should be redirected to the login page
         response = self.client.get(self.url)
@@ -270,7 +276,8 @@ class EntryBatchImportViewTests(TestCase):
         self.assertRedirects(response, login_redirect_url)
 
         # Log user as a super user
-        self.client.login(username=self.superuser.username, password=self.fake_password)
+        self.client.login(username=self.superuser.username,
+                          password=self.fake_password)
 
         # A super user should not be redirected
         response = self.client.get(self.url)
@@ -281,7 +288,8 @@ class EntryBatchImportViewTests(TestCase):
         """
         Test the EntryBatchImportView get method
         """
-        self.client.login(username=self.superuser.username, password=self.fake_password)
+        self.client.login(username=self.superuser.username,
+                          password=self.fake_password)
         response = self.client.get(self.url)
 
         # Standard response
@@ -292,7 +300,8 @@ class EntryBatchImportViewTests(TestCase):
         """
         Test the EntryBatchImportView post method
         """
-        self.client.login(username=self.superuser.username, password=self.fake_password)
+        self.client.login(username=self.superuser.username,
+                          password=self.fake_password)
 
         self.assertEqual(Entry.objects.count(), 0)
 
@@ -316,5 +325,6 @@ class EntryBatchImportViewTests(TestCase):
         # We have two messages (we did the same request two times)
         self.assertEqual(len(response_messages), 2)
         for m in response_messages:
-            self.assertEqual(str(m), "We have successfully imported 4 reference(s).")
+            self.assertEqual(str(m), "We have successfully imported 4 "
+                                     "reference(s).")
             self.assertEqual(m.level, messages.SUCCESS)

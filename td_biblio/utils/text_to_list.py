@@ -1,5 +1,6 @@
 from operator import methodcaller
 
+
 def text_to_list(raw):
     """Transform a raw text list to a python sorted object list
     Supported separators: coma, space and carriage return

@@ -89,7 +89,8 @@ class AbstractHumanModelTestMixin(ModelTestMixin):
         human = self.factory(first_name="John", last_name="McClane")
         self.assertEqual(human.first_initial, "J")
 
-        human = self.factory(first_name="John Jack Junior", last_name="McClane")
+        human = self.factory(first_name="John Jack Junior",
+                             last_name="McClane")
         self.assertEqual(human.first_initial, "J J J")
 
         human.first_name = "Jumping Jack Flash"
@@ -137,14 +138,16 @@ class AbstractHumanModelTestMixin(ModelTestMixin):
 
         # We have 2 possible matches
         user = get_user_model().objects.create(
-            username="johnjuniormcclane", first_name="John Junior", last_name="McClane"
+            username="johnjuniormcclane", first_name="John Junior",
+            last_name="McClane"
         )
         human = self.factory(first_name="J", last_name="McClane")
         self.assertIsNone(human.user)
 
         # We have 2 possible matches
         user = get_user_model().objects.create(
-            username="johnjuniormcclane2", first_name="John Junior", last_name="McClane"
+            username="johnjuniormcclane2", first_name="John Junior",
+            last_name="McClane"
         )
         human = self.factory(first_name="John", last_name="McClane")
         self.assertIsNone(human.user)
@@ -230,7 +233,8 @@ class EntryModelTest(ModelTestMixin, TestCase):
         """
         Test __str__ method
         """
-        journal = JournalFactory(name="Die Hard Journal", abbreviation="Die Hard J")
+        journal = JournalFactory(name="Die Hard Journal",
+                                 abbreviation="Die Hard J")
 
         entry = self.factory(
             title="Yippee-ki-yay, motherfucker",

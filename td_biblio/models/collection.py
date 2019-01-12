@@ -7,7 +7,8 @@ class Collection(models.Model):
     """Define a collection of entries"""
 
     name = models.CharField(_("Name"), max_length=100)
-    short_description = models.TextField(_("Short description"), blank=True, null=True)
+    short_description = models.TextField(_("Short description"), blank=True,
+                                         null=True)
     entries = models.ManyToManyField("Entry", related_name="collections")
 
     class Meta:

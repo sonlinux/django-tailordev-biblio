@@ -10,6 +10,7 @@ from td_biblio.models import Entry
 
 ENTRY_TYPES_RAW_CHOICES = [c[0] for c in Entry.ENTRY_TYPES_CHOICES]
 
+
 class EntryFactory(DjangoModelFactory):
 
     type = factory.fuzzy.FuzzyChoice(ENTRY_TYPES_RAW_CHOICES)

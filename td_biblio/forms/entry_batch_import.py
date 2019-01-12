@@ -11,7 +11,8 @@ class EntryBatchImportForm(forms.Form):
         label=_("PMID"),
         widget=forms.Textarea(attrs={"placeholder": "ex: 26588162, 19569182"}),
         help_text=_(
-            "Paste a list of PubMed Identifiers " "(comma separated or one per line)"
+            "Paste a list of PubMed Identifiers " "(comma separated or one "
+            "per line)"
         ),
         required=False,
     )

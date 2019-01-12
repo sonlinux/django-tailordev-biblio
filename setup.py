@@ -86,7 +86,7 @@ setup(
     ],
     install_requires=parse_requirements(
         "deployment/docker/REQUIREMENTS.txt"),
-    tests_require=parse_requirements( "deployment/docker/REQUIREMENTS.txt"),
+    tests_require=parse_requirements("deployment/docker/REQUIREMENTS.txt"),
     keywords="django biblio bibliography bibtex publication",
     dependency_links=[]
 )
