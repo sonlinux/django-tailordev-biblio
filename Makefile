@@ -32,10 +32,6 @@ dev: venv  ## start the development server
 	@$(MANAGE) runserver
 .PHONY: dev
 
-migrate: venv  ## perform database migrations
-	@$(MANAGE) migrate
-.PHONY: migrate
-
 test: venv  ## run the test suite
 	@$(TESTS_DATABASE_URL) $(PYTEST)
 .PHONY: test
