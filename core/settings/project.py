@@ -6,13 +6,12 @@ Adjust these values as needed but don't commit passwords etc. to any public
 repository!
 """
 
-import os  # noqa
 from django.utils.translation import ugettext_lazy as _
 from .contrib import *  # noqa
 
 # Project apps
 INSTALLED_APPS += (
-    'td-biblio',
+    'td_biblio',
 )
 
 # Set languages which want to be translated

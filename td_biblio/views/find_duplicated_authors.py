@@ -14,7 +14,7 @@ except ImportError:
 from django.utils.encoding import force_text
 
 from django.utils.translation import ugettext_lazy as _
-from django.views.generic import FormView, ListView
+from django.views.generic import ListView
 from django.views.generic.edit import FormMixin
 
 logger = logging.getLogger("td_biblio")

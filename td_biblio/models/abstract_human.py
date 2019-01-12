@@ -68,8 +68,8 @@ class AbstractHuman(models.Model):
         try:
             self.user = User.objects.get(
                 models.Q(last_name__iexact=self.last_name),
-                models.Q(first_name__iexact=self.first_name)
-                | models.Q(first_name__istartswith=self.first_initial[0]),
+                models.Q(first_name__iexact=self.first_name) | models.Q(
+                    first_name__istartswith=self.first_initial[0]),
             )
         except User.DoesNotExist:
             pass
