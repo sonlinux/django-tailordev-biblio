@@ -1,0 +1,2 @@
+class BaseLoaderError(Exception):
+    pass
