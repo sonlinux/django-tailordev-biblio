@@ -49,7 +49,7 @@ pytest-django>=3.1.2
 pytest-mock>=1.6.3
 coveralls
 
-# Fixtures
+# Test tixtures
 factory-boy>=2.6.0
 
 # PyPI

@@ -3,7 +3,6 @@ coverage
 pep8>=1.5.7,<1.6
 pylint
 flake8==3.3.0
-factory_boy
 
 # documentation
 Sphinx
