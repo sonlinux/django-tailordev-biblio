@@ -1,8 +1,5 @@
-
-__author__ = 'Alison Mukoma <mukomalison@gmail.com>'
-__licence__ = 'MIT'
-
 # -*- coding: utf-8 -*-
+__author__ = 'Alison Mukoma <mukomalison@gmail.com>'
 from .test import *  # noqa
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'

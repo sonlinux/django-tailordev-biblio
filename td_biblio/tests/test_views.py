@@ -18,8 +18,8 @@ except ImportError:
 
 from django.test import TestCase
 
-from ..factories import CollectionFactory, EntryWithAuthorsFactory
-from ..models import Entry
+from td_biblio.factories import CollectionFactory, EntryWithAuthorsFactory
+from td_biblio.models.entry import Entry
 
 
 @pytest.mark.django_db

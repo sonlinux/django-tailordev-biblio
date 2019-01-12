@@ -83,7 +83,8 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_EMAIL_REQUIRED = True
 # ACCOUNT_SIGNUP_FORM_CLASS = 'base.forms.SignupForm'
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+#ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+LOGIN_URL = reverse_lazy("login")
 LOGIN_REDIRECT_URL = reverse_lazy("td_biblio:import")
 
 # ROLEPERMISSIONS_MODULE = 'roles.settings.roles'

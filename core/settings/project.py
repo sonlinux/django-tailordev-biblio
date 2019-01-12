@@ -27,14 +27,9 @@ PIPELINE = {
     'STYLESHEETS': {
         'td-biblio-base': {
             'source_filenames': {
-                'js/libs/bootstrap-4.0.0/css/bootstrap.min.css',
-                'js/libs/font-awesome/css/font-awesome.min.css',
-                'js/libs/magnific-popup/magnific-popup.css',
-                'js/libs/openlayers-4.6.4/ol.css',
-                'js/libs/jquery-ui-1.12.1/jquery-ui.min.css',
-                'css/base.css',
+                'css/styles.css',
             },
-            'output_filename': 'css/td-biblio-base.css',
+            'output_filename': 'css/styles.css',
             'extra_content': {
                 'media': 'screen, projection',
             }
@@ -44,7 +39,7 @@ PIPELINE = {
 
     }
 }
-
+# library needs to be added to path below
 REQUIRE_JS_PATH = '/static/js/libs/requirejs-2.3.5/require.js'
 
 GRUNT_MODULES = {

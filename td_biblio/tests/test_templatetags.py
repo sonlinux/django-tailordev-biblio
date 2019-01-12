@@ -9,7 +9,7 @@ except ImportError:
 
 from django.test import TestCase
 
-from ..factories import EntryFactory
+from td_biblio.factories.entry import EntryFactory
 
 
 @pytest.mark.django_db

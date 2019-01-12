@@ -7,7 +7,7 @@ Test factories.
 import pytest
 from django.test import TestCase
 
-from ..factories import FuzzyPages, EntryFactory
+from td_biblio.factories import FuzzyPages, EntryFactory
 
 
 @pytest.mark.django_db

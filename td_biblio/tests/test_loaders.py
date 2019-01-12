@@ -13,9 +13,9 @@ from django.test import TestCase
 from eutils.exceptions import EutilsNCBIError
 from requests.exceptions import HTTPError
 
-from ..exceptions import DOILoaderError, PMIDLoaderError
-from ..utils.loaders import BibTeXLoader, DOILoader, PubmedLoader
-from ..models import Author, Entry, Journal
+from td_biblio.exceptions import DOILoaderError, PMIDLoaderError
+from td_biblio.utils.loaders import BibTeXLoader, DOILoader, PubmedLoader
+from td_biblio.models import Author, Entry, Journal
 from .fixtures.entries import PMIDs as FPMIDS, DOIs as FDOIS
 
 FileNotFoundError = getattr(__builtins__, "FileNotFoundError", IOError)

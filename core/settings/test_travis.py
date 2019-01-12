@@ -1,7 +1,6 @@
-
+# -*- coding: utf-8 -*-
 __author__ = 'Alison Mukoma <sonlinux>'
 
-# -*- coding: utf-8 -*-
 from .test import *  # noqa
 
 DATABASES = {

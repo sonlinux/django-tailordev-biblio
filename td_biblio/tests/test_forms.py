@@ -7,7 +7,8 @@ Test forms
 from __future__ import unicode_literals
 from django.test import TestCase
 
-from ..forms import text_to_list, EntryBatchImportForm
+from td_biblio.utils.text_to_list import text_to_list
+from td_biblio.forms.entry_batch_import import EntryBatchImportForm
 
 
 def test_text_to_list():

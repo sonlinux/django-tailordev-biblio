@@ -10,7 +10,7 @@ import pytest
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 
-from ..factories import (
+from td_biblio.factories import (
     AuthorFactory,
     EditorFactory,
     JournalFactory,
@@ -21,7 +21,7 @@ from ..factories import (
     EntryWithStaticAuthorsFactory,
 )
 
-from ..models import (
+from td_biblio.models import (
     Author,
     Editor,
     Journal,
